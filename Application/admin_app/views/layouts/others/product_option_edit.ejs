@@ -1,0 +1,56 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">product_option edit </h2><form id="product_option_edit_form" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+
+    <div class="row g-3">
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="option_id" class="form-label">option_id</label>
+            <select type="input_type" class="form-control" name="option_id" id="option_id" placeholder="option_id" required input_add>
+                            <% if (typeof foreignDatasObj.option_id != 'undefined' && foreignDatasObj.option_id.length > 0 ){
+                for(var i = 0;i < foreignDatasObj.option_id.length;i++) { %>
+                <option value="<%= foreignDatasObj.option_id[i].option_id %>" <% if (foreignDatasObj.option_id[i].option_id == product_option[0].option_id) {%> selected <%}%>><%= foreignDatasObj.option_id[i].table_row %></option>
+                <% }} %>          </select>
+            <div class="invalid-feedback">
+                Valid option_id is required.
+            </div>
+        </div>
+,        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="detail_id" class="form-label">detail_id</label>
+            <select type="input_type" class="form-control" name="detail_id" id="detail_id" placeholder="detail_id" required input_add>
+                            <% if (typeof foreignDatasObj.detail_id != 'undefined' && foreignDatasObj.detail_id.length > 0 ){
+                for(var i = 0;i < foreignDatasObj.detail_id.length;i++) { %>
+                <option value="<%= foreignDatasObj.detail_id[i].detail_id %>" <% if (foreignDatasObj.detail_id[i].detail_id == product_option[0].detail_id) {%> selected <%}%>><%= foreignDatasObj.detail_id[i].table_row %></option>
+                <% }} %>          </select>
+            <div class="invalid-feedback">
+                Valid detail_id is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="main" class="form-label">main</label>
+            <input type="file" class="form-control" name="main" id="main" placeholder="main" value="main_value"  input_add>
+            <div class="invalid-feedback">
+                Valid main is .
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="file_u" class="form-label">file_u</label>
+            <input type="file" class="form-control" name="file_u" id="file_u" placeholder="file_u" value="file_u_value"   multiple="multiple">
+            <div class="invalid-feedback">
+                Valid file_u is .
+            </div>
+        </div>
+
+table_inputs    </div>
+
+    <hr class="my-4">
+
+    <button class="w-100 btn btn-primary btn-lg" type="submit">edit</button>
+</form>
+<%- include ("layouts/footer.ejs") %>
+
+

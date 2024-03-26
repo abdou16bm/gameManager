@@ -1,0 +1,212 @@
+<%- include ("layouts/header.ejs") %>
+
+<main class="col-md-9 ms-sm-auto col-lg-11 px-md-4 scrollbar" style="min-height: 680px; max-height:1080px">
+    <div class="container-fluid pt-3 pb-2 mb-3 border-bottom ">
+        <div class="row ">
+            <div class="tab menu-list-tab col-12 ">
+                <ul class="tabs">
+                    <li>
+                        <a href="#" class="text-warning">
+                            <!-- <i class="flaticon-hamburger"></i> -->
+                            <span>Commandes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-success">
+                            <!--   <i class="flaticon-boiled"></i> -->
+                            <span>Validés</span>
+                        </a>
+                    </li>
+                </ul>
+
+
+                <div class="tab_content">
+                    <div class="tabs_item">
+                        <a class="btn btn-success mb-1" style="font-size: small;" href="/order/new"> <i class="bx bx-plus"></i> Nouvelle commande</a>
+
+                        <div class="row">
+
+                            <% if (typeof (order_client) != "undefined" &&  order_client.length > 0 ) {
+                                for(let i = 0; i<order_client.length; i++) {
+                                %>
+                            <div class="col-lg-3 col-sm-12">
+                                <div class="faq-accordion" >
+                                    <ul class="accordion" >
+                                        <li class="accordion-item" >
+                                            <a class="accordion-title bg-light" href="javascript:void(0)">
+                                                <i class="flaticon-plus"></i>
+                                                <div class="cart-table table-responsive ">
+                                                    <table class="table ">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">
+                                                                    <p>Numéro</p>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <p>Total</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="product-name">
+                                                                        <h1><%= order_client[i].order_number%></h1>
+                                                                    </td>
+                                                                <td class="product-price">
+                                                                    <span class="unit-amount"><%= order_client[i].order_total_price%> da</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </a>
+
+
+                                            <div class="accordion-content cart-table table-responsive">
+                                                <table class="table table-bordered text-center"
+                                                    style="font-size: 10px;">
+                                                    <thead>
+                                                        <tr>
+
+                                                            <th scope="col">Produit</th>
+                                                            <th scope="col">Prix Unit</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <% if (typeof (order_client[i].products) != "undefined" &&  order_client[i].products.length > 0 ) {
+                                                    for(let j = 0; j<order_client[i].products.length; j++) {
+                                                    %>
+
+                                                        <tr>
+
+                                                            <td class="product-name">
+                                                                <%= order_client[i].products[j].product_name %>
+                                                            </td>
+                                                            <td class="product-price">
+                                                                <span class="unit-amount"> <%= order_client[i].products[j].detail_price %> da</span>
+                                                            </td>
+                                                        </tr>
+                                                    <% }
+                                                    }%>
+                                                    </tbody>
+                                                </table>
+                                                <div class="cart-buttons">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-lg-4 col-sm-4 col-md-4 text-center">
+                                                            <a href="/order_client/<%= order_client[i].order_id%>/details" class="btn btn-sm btn-danger">Modifier </a>
+                                                        </div>
+                                                        <div class="col-lg-4 col-sm-4 col-md-4 text-center">
+                                                            <a class="btn btn-sm btn-success" type="button" data-bs-toggle="modal" data-bs-target="#confirmActionModal"  onclick="confirmmodal('<%= order_client[i].order_id %>',4)">Valider</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <% }
+                           }%>
+                        </div>
+                    </div>
+                    <!-- - -->
+                    <div class="tabs_item">
+                        <div class="row">
+                            <% if (typeof (order_client_valid) != "undefined" &&  order_client_valid.length > 0 ) {
+                                for(let i = 0; i<order_client_valid.length; i++) {
+                                %>
+                            <div class="col-4 ">
+                                <div class="faq-accordion">
+                                    <ul class="accordion ">
+                                        <li class="accordion-item">
+                                            <a class="accordion-title bg-light" href="javascript:void(0)">
+                                                <i class="flaticon-plus"></i>
+                                                <div class="cart-table table-responsive  ">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">
+                                                                    <p>Numéro</p>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <p>Total</p>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="product-name ">
+                                                                    <a href="#">
+                                                                        <h1 class="text-success"><%= order_client_valid[i].order_number%></h1>
+                                                                    </a>
+                                                                </td>
+                                                                <td class="product-price">
+                                                                    <span class="unit-amount"><%= order_client_valid[i].order_total_price%> da</span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </a>
+
+                                            <div class="accordion-content cart-table table-responsive">
+                                                <table class="table table-bordered text-center"
+                                                    style="font-size: 10px;">
+                                                    <thead>
+                                                        <tr>
+
+                                                            <th scope="col">Produit</th>
+                                                            <th scope="col">Prix Unit</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <% if (typeof (order_client_valid[i].products) != "undefined" &&  order_client_valid[i].products.length > 0 ) {
+                                                    for(let j = 0; j<order_client_valid[i].products.length; j++) {
+                                                    %>
+
+                                                        <tr>
+
+                                                            <td class="product-name">
+                                                                <%= order_client_valid[i].products[j].product_name %>
+                                                            </td>
+                                                            <td class="product-price">
+                                                                <span class="unit-amount"> <%= order_client_valid[i].products[j].detail_price %> da</span>
+                                                            </td>
+                                                        </tr>
+                                                    <% }
+                                                    }%>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <% }
+                           }%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</main>
+
+<%- include ("layouts/footer.ejs") %>
+<%- include ("layouts/modal.ejs") %>
+
+<script src="/lib/data_control.js"></script>
+
+
+<script>
+    setInterval(function (){
+        location.reload()
+    },20000)
+</script>

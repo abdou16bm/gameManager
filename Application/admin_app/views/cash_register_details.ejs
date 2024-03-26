@@ -1,0 +1,116 @@
+
+<%- include ("layouts/header.ejs") %>
+<%- include ("layouts/modal.ejs") %>
+
+
+<main class="col-md-9 ms-sm-auto col-lg-11 px-md-4 scrollbar" style="min-height: 680px; max-height:1080px">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+       
+        <% if (typeof (waiting) != "undefined" && waiting.length > 0) { %>
+
+            <h1 class="h2">Details du <%= waiting[0].waiting_date.toLocaleDateString()%> </h1>
+            <form class="input-group w-25" method="get">
+                <input type="text" class="form-control" placeholder="N° de commande" name="order">
+                <button class="btn btn-outline-secondary" type="submit">Recherche</button>
+            </form>
+            <form class="input-group w-25" method="get">
+                <select class="form-select" name="userOrder" onchange="location.href = '/cash_register/details/<%= waiting[0].waiting_id %>/page/1?userOrder='+this.value">
+                <option disabled selected>Filtrer par caissier</option>
+                <% if (typeof (user) != "undefined" &&  user.length > 0 ) {for(let i = 0; i<user.length; i++) { %>
+                        <option value="<%= user[i].user_id %>"><%= user[i].user_username %></option>
+                <%}}%>
+                </select>  
+            </form>
+     
+        <%}%>   
+          
+        <div>
+            <% if (typeof (waiting) != "undefined" && waiting.length > 0) { %>
+                <a href="/cash_register/details/<%= waiting[0].waiting_id %> %>/page/1" class="btn btn-success">Actualiser</a>
+            <%}%>
+            <a href="/cash_register/admin/page/1" class="btn btn-warning">Retour</a>
+        </div>
+   
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 pb-5 ">
+                <div class="order-details">
+                    <div class="order-table table-responsive ">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <!-- <th scope="col">#</th> -->
+                                <th scope="col">Caissier</th>
+                                <th scope="col">Numéro commande</th>
+                                <th scope="col">Date commande</th>
+                                <th scope="col">Total commande</th>                           
+                            </tr>
+                            </thead>
+                            <% if (typeof (order_client) != "undefined" &&  order_client.length > 0 ) {
+                            for(let i = 0; i<order_client.length; i++) {
+                            %>
+                                <tbody>
+                                <tr>
+                                    
+                                    <td><%= order_client[i].user_username %></td>
+                                    <td><%= order_client[i].order_id%></td>
+                                    <td><%= order_client[i].waiting_date.toLocaleDateString()%></td>
+                                    <td><% let formating=Intl.NumberFormat('en-US') %><%= formating.format(order_client[i].order_total_price)+" DA" %></td>
+                                    
+                                </tr>
+                                </tbody>
+
+                            <% }
+                            }%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+
+                <% if (typeof(info) != 'undefined' &&  info.count_page > 0) { %>
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <% if (info.current_page == 1) { %>
+                                <li class="page-item disabled"><a class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <% } else { %>
+                                <li class="page-item"><a class="page-link" aria-label="Previous" href="/cash_register/admin/<%=info.current_page-1%>"><span aria-hidden="true">&laquo;</span></a></li>
+                            <% } %>
+                            <% for (var i = (Number(info.current_page) > 5 ? Number(info.current_page) - 4 : 1);
+                                    i <= (Number(info.current_page) + 4) && i <= info.count_page; i++) { %>
+                                <% if (i == info.current_page) { %>
+                                   <li class="page-item disabled"><a class="page-link" href="/cash_register/admin/<%= i %>"><%= i %></a></li>
+                                    <% } else { %>
+                                            <li class="page-item"><a class="page-link" href="/cash_register/admin/<%= i %>"><%= i %></a></li>
+                                    <% } %>
+                                <% } %>
+
+                                <% if (info.current_page == info.count_page) { %>
+                                <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                <% } else { %>
+                                <li class="page-item"><a class="page-link" aria-label="Next" href="/cash_register/admin/<%=info.current_page+1%>"><span aria-hidden="true">&raquo;</span></a></li>
+                                <% } %>
+                        </ul>
+                    </nav>
+                    <% } %>
+
+
+
+          </div>
+
+
+        </div>
+    </div>
+
+</main>
+
+
+
+
+<%- include ("layouts/footer.ejs") %>
+
+
+<script src="/lib/data_control.js"></script>

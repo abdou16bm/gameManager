@@ -1,0 +1,18 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">privilege details</h2><% if (typeof (privilege) != "undefined" &&  privilege.length > 0 ) { %>
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1"><%= privilege[0].privilege_title%> <span class="text-muted">....</span></h2>
+            <p class="lead"><%- privilege[0].privilege_content%></p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/img/default.png"/>
+        </div>
+    </div>
+<% } %>
+<%- include ("layouts/footer.ejs") %>
+
+

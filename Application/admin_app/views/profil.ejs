@@ -1,0 +1,52 @@
+<%- include ("layouts/header.ejs") %>
+
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Paramètre</h1>
+    </div>
+    <div class="card col-12">
+        <div class="card-header col-12"><h5>Modification</h5></div>
+        <form class="form-horizontal" method="post" enctype="multipart/form-data">
+            <div class="card-body">
+                <div class="col-sm-12 form-group row mb-3">
+                    <label for="inputUser" class="col-sm-4 col-form-label">Utilisateur</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="username" value="<%= session.username %>">
+                    </div>
+                </div>
+                <div class="col-sm-12 form-group row mb-3">
+                    <label for="inputpassword" class="col-sm-4 col-form-label">Ancien Mot de Passe</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 form-group row mb-3">
+                    <label for="passwordNew" class="col-sm-4 col-form-label">Nouveau Mot de Passe</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" name="passwordNew">
+                    </div>
+                </div>
+                <div class="col-sm-12 form-group row mb-3">
+                    <label for="passwordNewC" class="col-sm-4 col-form-label">Confirmation Mot de Passe</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" name="passwordNewC">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class=" col-sm-10">
+                    <input type="submit" class="btn btn-success" value="valider"/>
+                    <% if (typeof(err) != 'undefined'){%>
+                        <p class="text-danger d-inline p-lg-1"> <%= err %></p>
+                    <%}%>
+                    <% if (typeof(success) != 'undefined'){%>
+                        <p class="text-success d-inline p-lg-1"> <%= success %></p>
+                    <%}%>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <%- include ("layouts/footer.ejs") %>

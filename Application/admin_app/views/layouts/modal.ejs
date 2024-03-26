@@ -1,0 +1,2092 @@
+<!-- new user -->
+
+<div class="modal  fade" id="user_add" tabindex="-1" role="dialog" aria-labelledby="new_user-label" aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="new_user-label">Nouvel utilisateur</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation" action="/signup" id="user_add_form"
+                                  method="post" novalidate>
+                                <input type="text" name="user_id" value="" hidden>
+
+                                <div class="billing-details">
+                                    <div class="row">
+                                        
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_username" class="form-label">Utilisateur</label>
+                                                <input type="text" class="form-control" name="signup_username" id="signup_username"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_password" class="form-label">Mot de passe</label>
+                                                <input type="password" class="form-control" name="signup_password" id="signup_password"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_password_c" class="form-label">Confirmation mot de passe</label>
+                                                <input type="password" class="form-control" name="signup_password_c" id="signup_password_c"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="user_lastname" class="form-label">Nom</label>
+                                                <input type="text" class="form-control" name="user_lastname" id="user_lastname"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="user_name" class="form-label">Prénom</label>
+                                                <input type="text" class="form-control" name="user_name" id="user_name"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Ajouter">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new user end -->
+
+
+<!-- edit user -->
+
+<div class="modal  fade" id="user_edit" tabindex="-1" role="dialog" aria-labelledby="edit_user-label" aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="edit_user-label">Modifier utilisateur</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation"  id="user_edit_form"
+                                  method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="user_id" value="" hidden>
+
+                                <div class="billing-details">
+                                    <div class="row">
+                                        
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_username" class="form-label">Utilisateur</label>
+                                                <input type="text" class="form-control" name="signup_username" id="signup_username"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_password" class="form-label">Mot de passe</label>
+                                                <input type="password" class="form-control" name="signup_password" id="signup_password"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="signup_password_c" class="form-label">Confirmation mot de passe</label>
+                                                <input type="password" class="form-control" name="signup_password_c" id="signup_password_c"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="user_lastname" class="form-label">Nom</label>
+                                                <input type="text" class="form-control" name="user_lastname" id="user_lastname"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="user_name" class="form-label">Prénom</label>
+                                                <input type="text" class="form-control" name="user_name" id="user_name"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Modifier">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- edit user end -->
+
+
+<!-- new cat -->
+
+<div class="modal  fade" id="new_cat" tabindex="-1" role="dialog" aria-labelledby="new_cat-label" aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="new_cat-label">Nouvelle catégorie</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation" action="/category/add" id="category_add_form"
+                                  method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="cat_id" value="" hidden>
+
+                                <div class="billing-details">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="main">Image pricipale</label>
+                                                <input type="file" class="form-control" name="main" id="main"
+                                                       placeholder="main" value="main_value">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="cat_name" class="form-label">Catégorie</label>
+                                                <input type="text" class="form-control" name="cat_name" id="cat_name"
+                                                       value="" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Ajouter">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new cat end -->
+
+<!-- edit cat -->
+
+<div class="modal  fade" id="category-edit" tabindex="-1" role="dialog" aria-labelledby="category-edit-label" aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="category-edit-label">Modifier catégorie</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation" id="category_edit_form" method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="cat_id" hidden>
+                                <div class="billing-details">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="main">Image pricipale</label>
+                                                <input id="main" name="main" type="file" class="form-control">
+                                                <!--                                                <input type="file" class="form-control" name="main" id="main" placeholder="main" value="main_value">-->
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="cat_name">Catégorie</label>
+                                                <input type="text" class="form-control" name="cat_name" id="cat_name" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Modifier">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- edit cat end -->
+
+
+<!-- new product -->
+
+<div class="modal  fade" id="product-add" tabindex="-1" role="dialog" aria-labelledby="product-addlabel" aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="product-addlabel">Ajouter un produit</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+                        <div class="col-lg-12">
+                            <form id="product_add_form" class=" row g-3 needs-validation" action="/product/add"
+                                  method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="product_id" value="" hidden>
+                                <div class="billing-details">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="cat_id">Catégorie
+                                                    <span class="required">*</span>
+                                                </label>
+
+                                                <div class="select-box">
+                                                    <select type="input_type" class="form-control" name="cat_id"
+                                                            id="cat_id" placeholder="cat_id" required>
+                                                        <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
+                                                        for(let i = 0; i<category.length; i++) {
+                                                        %>
+                                                        <option value="<%=category[i].cat_id%>">
+                                                            <%= category[i].cat_name%></option>
+                                                        <% }
+                                                        }%>
+                                                    </select>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="main">Image pricipale</label>
+                                                <input type="file" class="form-control" name="main" id="main"
+                                                       placeholder="main" value="main_value">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="form-group">
+                                                <label for="product_name">Produit</label>
+                                                <input type="text" class="form-control" name="product_name"
+                                                       id="product_name" placeholder="Produit" value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="form-group">
+                                                <label for="product_price">Prix</label>
+                                                <input type="number" class="form-control" name="product_price"
+                                                       id="product_price" placeholder="Prix" value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="product_desig" id="product_desig"
+                                                          value="" required cols="30" rows="5"
+                                                          placeholder="INGRÉDIENTS"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div id="product-add-options" class="d-flex justify-content-start flex-wrap">
+
+                                            <% if (typeof (option_add) != "undefined" &&  option_add.length > 0 ) {
+                                            for(let i = 0; i<option_add.length; i++) {
+                                            %>
+
+                                            <div class="col-lg-3 col-md-3">
+                                                <div class="form-group">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" name="option_add_product" type="checkbox" value="<%=option_add[i].option_id%>">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            <%= option_add[i].option_name%>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <% }
+                                            }%>
+
+                                        </div>                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Ajouter">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- new product end -->
+
+
+<!-- edit product -->
+<% if (typeof (category) != "undefined" &&  category.length > 0) {
+%>
+    <div class="modal  fade" id="product-edit" tabindex="-1" role="dialog" aria-labelledby="product-edit-label" aria-hidden="true">
+        <div class="modal-lg modal-dialog mt-6" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header px-5 position-relative modal-shape-header">
+                    <div class="position-relative z-index-1 light">
+                        <h4 class="mb-0" id="edit_cat-label">Modifier un produit</h4>
+
+                    </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4 px-5">
+
+                    <section class="row">
+                        <div class="container-xl d-flex justify-content-between">
+
+
+                            <div class="col-lg-12">
+                                <form id="product_edit_form" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+                                    <div class="billing-details">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="product_id" id="product_id" hidden required>
+                                                    <label>Catégorie
+                                                        <span class="required">*</span>
+                                                    </label>
+                                                    <div class="select-box">
+                                                        <select class="form-control" name="cat_id" id="cat_id" required>
+                                                            <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
+                                                            for(let i = 0; i<category.length; i++) {
+                                                            %>
+                                                            <option value="<%=category[i].cat_id%>">
+                                                                <%= category[i].cat_name%></option>
+                                                            <% }
+                                                            }%>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <label for="main">Image pricipale</label>
+                                                    <input type="file" class="form-control" name="main" id="main" placeholder="main" value="main_value">
+
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="product_name">Produit</label>
+                                                    <input type="text" class="form-control" name="product_name"
+                                                           id="product_name" placeholder="product_name" value=" " required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label for="product_price">Prix</label>
+                                                    <input type="text" class="form-control" name="product_price"
+                                                           id="product_price" placeholder="product_price" value=" " required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="form-group">
+                                                    <textarea cols="30" rows="5" class="form-control" name="product_desig"
+                                                              id="product_desig" value=" " required></textarea>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="product-edit-options" class="d-flex justify-content-start flex-wrap">
+
+                                                <% if (typeof (option_add) != "undefined" &&  option_add.length > 0 ) {
+                                                for(let i = 0; i<option_add.length; i++) {
+                                                %>
+
+                                                <div class="col-lg-3 col-md-3">
+                                                    <div class="form-group">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" name="option_add_product" type="checkbox" value="<%=option_add[i].option_id%>" id="option<%=option_add[i].option_id%>">
+                                                            <label class="form-check-label" for="option<%=option_add[i].option_id%>">
+                                                                <%= option_add[i].option_name%>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <% }
+                                                }%>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="cart-buttons">
+                                        <div class="row justify-content-between">
+                                            <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                                <button type="button" class="default-btn btn-danger"
+                                                        style="background-color: #e60027;"
+                                                        data-bs-dismiss="modal">Fermer</button>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                                <input type="submit" class="default-btn" style="background-color: #82b440;" value="Modifier">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<%}%>
+<!-- edit product end -->
+
+
+<!-- new option -->
+
+<div class="modal  fade" id="new_option_add" tabindex="-1" role="dialog" aria-labelledby="new_option_add-label"
+     aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="new_option_add-label">Ajouter une option</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation" action="/option_add/add" id="option_add_add_form"
+                                  method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="option_id" value="" hidden>
+
+                                <div class="billing-details">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="main">Image pricipale</label>
+                                                <input type="file" class="form-control" name="main" id="main"
+                                                       placeholder="main" value="main_value">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="option_name" class="form-label">Option</label>
+                                                <input type="text" class="form-control" name="option_name"
+                                                       id="option_name" value="" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="option_price" class="form-label">Prix</label>
+                                                <input type="text" class="form-control" name="option_price"
+                                                       id="option_price" value="" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Ajouter">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- new option end -->
+
+
+<!-- edit option -->
+
+<div class="modal  fade" id="option_add_edit" tabindex="-1" role="dialog" aria-labelledby="option_add_edit-label"
+     aria-hidden="true">
+    <div class="modal-lg modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="option_add_edit-label">Modifier </h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+                        <div class="col-lg-12">
+                            <form class="row g-3 needs-validation" id="option_edit_form" method="post" enctype="multipart/form-data" novalidate>
+                                <input type="text" name="option_id" value="" hidden>
+                                <div class="billing-details">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="main">Image pricipale</label>
+                                                <input id="main" name="main" type="file" class="form-control">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="option_name">Option</label>
+                                                <input type="text" class="form-control" name="option_name" value=" " id="option_name" placeholder=" " required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="option_price">Prix</label>
+                                                <input type="text" class="form-control" name="option_price" value=" " id="option_price" placeholder=" " required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <button type="button" class="default-btn btn-danger"
+                                                    style="background-color: #e60027;"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+
+                                            <input type="submit" class="default-btn" style="background-color: #82b440;"
+                                                   value="Modifier">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- edit cat end -->
+
+
+
+
+
+
+<div class="modal  fade" id="edit_ordre" tabindex="-1" role="dialog" aria-labelledby="edit_ordre-label"
+     aria-hidden="true">
+    <div class=" modal-fullscreen modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="edit_ordre-label">Modifier la commande</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row ptb-50">
+                    <div class="container-xl d-flex justify-content-between">
+
+                        <div class="tab menu-list-tab col-8">
+                            <ul class="tabs">
+                                <li>
+                                    <a href="#">
+                                        <i class="flaticon-hamburger"></i>
+                                        <span>Burgers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="flaticon-boiled"></i>
+                                        <span>Poulet</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="flaticon-pizza-slice"></i>
+                                        <span>Pizzas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="flaticon-frappe"></i>
+                                        <span>Boisson</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="flaticon-tea-cup"></i>
+                                        <span>Café</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab_content">
+                                <div class="tabs_item">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Burger Bros</h3>
+
+                                                    <span>600,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Burger Bistro</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Burger Bistro</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Rockin' Burgers</h3>
+
+                                                    <span>200,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Burger Bros</h3>
+
+                                                    <span>400,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Bruce's Burgers</h3>
+
+                                                    <span>300,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Rockin' Burgers</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Bruce's Burgers</h3>
+
+                                                    <span>500,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- - -->
+                                <div class="tabs_item">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Burger Bros</h3>
+
+                                                    <span>600,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Al Pesto</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Tartufata</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Fiori Di Zucca</h3>
+
+                                                    <span>200,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Campagnola</h3>
+
+                                                    <span>400,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Mediterranea</h3>
+
+                                                    <span>300,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Vegetariana</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Boscaiola</h3>
+
+                                                    <span>500,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- --- -->
+                                <div class="tabs_item">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Quattro Stagioni</h3>
+
+                                                    <span>600,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Al Pesto</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Tartufata</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Fiori Di Zucca</h3>
+
+                                                    <span>200,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Campagnola</h3>
+
+                                                    <span>400,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Mediterranea</h3>
+
+                                                    <span>300,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Vegetariana</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Boscaiola</h3>
+
+                                                    <span>500,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tabs_item">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Quattro Stagioni</h3>
+
+                                                    <span>600,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Al Pesto</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Tartufata</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Fiori Di Zucca</h3>
+
+                                                    <span>200,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Campagnola</h3>
+
+                                                    <span>400,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Mediterranea</h3>
+
+                                                    <span>300,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Vegetariana</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Boscaiola</h3>
+
+                                                    <span>500,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tabs_item">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Quattro Stagioni</h3>
+
+                                                    <span>600,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Al Pesto</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Pizza Tartufata</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Fiori Di Zucca</h3>
+
+                                                    <span>200,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Campagnola</h3>
+
+                                                    <span>400,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Mediterranea</h3>
+
+                                                    <span>300,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Vegetariana</h3>
+
+                                                    <span>450,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="pizza-shop-item">
+                                                <div class="image">
+
+                                                    <div class="pizza-btn">
+                                                        <a href="#" class="default-btn">
+                                                            Commander
+                                                            <i class="flaticon-play-button"></i>
+                                                            <span></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="content">
+                                                    <h3>Boscaiola</h3>
+
+                                                    <span>500,00 da</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4" style="margin-left: 2%;">
+                            <div class="welcome-content">
+                                <span>Votre commande</span>
+
+                            </div>
+                            <form>
+                                <div class="cart-table table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <!-- <th scope="col">Product</th> -->
+                                            <th scope="col">Produit</th>
+                                            <th scope="col">Prix Unit</th>
+                                            <th scope="col">Quantité</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image1.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Burger Bistro</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">500,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    <span class="minus-btn">
+                                                        <i class='bx bx-minus'></i>
+                                                    </span>
+                                                    <input type="text" value="1">
+                                                    <span class="plus-btn">
+                                                        <i class='bx bx-plus'></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">500,00 da</span>
+                                                <a href="#" class="remove">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image2.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Hot Cross Buns</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">450,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    <span class="minus-btn">
+                                                        <i class='bx bx-minus'></i>
+                                                    </span>
+                                                    <input type="text" value="1">
+                                                    <span class="plus-btn">
+                                                        <i class='bx bx-plus'></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">450,00 da</span>
+                                                <a href="#" class="remove">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image3.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">We Love Beef</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">450,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    <span class="minus-btn">
+                                                        <i class='bx bx-minus'></i>
+                                                    </span>
+                                                    <input type="text" value="1">
+                                                    <span class="plus-btn">
+                                                        <i class='bx bx-plus'></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">450,00 da</span>
+                                                <a href="#" class="remove">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image4.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Dungeon Burgers</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">500,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    <span class="minus-btn">
+                                                        <i class='bx bx-minus'></i>
+                                                    </span>
+                                                    <input type="text" value="1">
+                                                    <span class="plus-btn">
+                                                        <i class='bx bx-plus'></i>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">500,00 da</span>
+                                                <a href="#" class="remove">
+                                                    <i class='bx bx-trash'></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a href="#" class="default-btn " style="background-color: #e60027;">
+                                                Annuler
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a href="#" class="default-btn" type="submit"
+                                               style="background-color: #82b440;">
+                                                Confirmer
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="cart-totals">
+                                    <h1 class="text-center" style="font-size: 80px;">N°40</h1>
+                                    <ul>
+
+                                        <li class="d-flex  justify-content-between">
+                                            <h2>Total :</h2>
+                                            <span>
+                                                <h1>1 900,00 da</h1>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <!-- <a href="#" class="default-btn">
+                                            Proceed to Checkout
+                                            <span></span>
+                                        </a> -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="menu-shape">
+                        <div class="shape1">
+                            <img src="/assets/img/image-icon/7.png" alt="image">
+                        </div>
+                        <div class="shape2">
+                            <img src="/assets/img/image-icon/4.png" alt="image">
+                        </div>
+                        <div class="shape3">
+                            <img src="/assets/img/image-icon/5.png" alt="image">
+                        </div>
+                        <div class="shape4">
+                            <img src="/assets/img/image-icon/6.png" alt="image">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal  fade" id="detail_ordre" tabindex="-1" role="dialog" aria-labelledby="detail_ordre-label"
+     aria-hidden="true">
+    <div class=" modal-xl modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="detail_ordre-label">Commande</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form>
+                                <div class="cart">
+                                    <h1 class="text-center" style="font-size: 80px;">N°40</h1>
+                                    <ul>
+
+                                        <li class="d-flex  justify-content-between">
+                                            <h2>Total :</h2>
+                                            <span>
+                                                <h1>1 900,00 da</h1>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cart-table table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <!-- <th scope="col">Product</th> -->
+                                            <th scope="col">Produit</th>
+                                            <th scope="col">Prix Unit</th>
+                                            <th scope="col">Quantité</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image1.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Burger Bistro</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">500,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">500,00 da</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image2.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Hot Cross Buns</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">450,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">450,00 da</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image3.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">We Love Beef</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">450,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">450,00 da</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td class="product-thumbnail">
+                                                        <a href="#">
+                                                            <img src="/assets/img/shop/image4.jpg" alt="item">
+                                                        </a>
+                                                    </td> -->
+                                            <td class="product-name">
+                                                <a href="#">Dungeon Burgers</a>
+                                            </td>
+                                            <td class="product-price">
+                                                <span class="unit-amount">500,00 da</span>
+                                            </td>
+                                            <td class="product-quantity">
+                                                <div class="input-counter">
+                                                    1
+                                                </div>
+                                            </td>
+                                            <td class="product-subtotal">
+                                                <span class="subtotal-amount">500,00 da</span>
+
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="menu-shape">
+                        <div class="shape1">
+                            <img src="/assets/img/image-icon/7.png" alt="image">
+                        </div>
+                        <div class="shape2">
+                            <img src="/assets/img/image-icon/4.png" alt="image">
+                        </div>
+                        <div class="shape3">
+                            <img src="/assets/img/image-icon/5.png" alt="image">
+                        </div>
+                        <div class="shape4">
+                            <img src="/assets/img/image-icon/6.png" alt="image">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal  fade" id="confirmActionModal" tabindex="-1" role="dialog" aria-labelledby="confirmActionModal-label" aria-hidden="true">
+    <div class=" modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="modal_text"></h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+                        <div class="col-lg-12">
+                            <p id="modal_message"></p>
+                            <form>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a type="button"  data-bs-dismiss="modal" aria-label="Close" class="default-btn " style="background-color: #e60027;">Non</a>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a type="button" class="default-btn" style="background-color: #82b440;">Oui</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="menu-shape">
+                        <div class="shape1">
+                            <img src="/assets/img/image-icon/7.png" alt="image">
+                        </div>
+                        <div class="shape2">
+                            <img src="/assets/img/image-icon/4.png" alt="image">
+                        </div>
+                        <div class="shape3">
+                            <img src="/assets/img/image-icon/5.png" alt="image">
+                        </div>
+                        <div class="shape4">
+                            <img src="/assets/img/image-icon/6.png" alt="image">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal  fade" id="paid" tabindex="-1" role="dialog" aria-labelledby="paid-label" aria-hidden="true">
+    <div class=" modal-dialog mt-6" role="document">
+        <div class="modal-content border-0">
+            <div class="modal-header px-5 position-relative modal-shape-header">
+                <div class="position-relative z-index-1 light">
+                    <h4 class="mb-0" id="paid-label">Confirmez le paiement ?</h4>
+
+                </div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-4 px-5">
+
+                <section class="row">
+                    <div class="container-xl d-flex justify-content-between">
+
+
+                        <div class="col-lg-12">
+                            <form>
+                                <div class="cart-buttons">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a href="#" class="default-btn " style="background-color: #e60027;">
+                                                Non
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                            <a href="#" class="default-btn" type="submit"
+                                               style="background-color: #82b440;">
+                                                Oui
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="menu-shape">
+                        <div class="shape1">
+                            <img src="/assets/img/image-icon/7.png" alt="image">
+                        </div>
+                        <div class="shape2">
+                            <img src="/assets/img/image-icon/4.png" alt="image">
+                        </div>
+                        <div class="shape3">
+                            <img src="/assets/img/image-icon/5.png" alt="image">
+                        </div>
+                        <div class="shape4">
+                            <img src="/assets/img/image-icon/6.png" alt="image">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+
+<%- include ("layouts/header.ejs") %>
+<%- include ("layouts/modal.ejs") %>
+
+<main class="col-md-9 ms-sm-auto col-lg-11 px-md-4 scrollbar" style="min-height: 680px; max-height:1080px">
+    <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Catégorie</h1>
+        <button class="btn btn-success mb-3" type="button" data-bs-toggle="modal" data-bs-target="#new_cat"> <i
+            class="bx bx-plus"></i> Ajouter</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-lg-12 col-md-12 pb-5">
+                <div class="order-details">
+                    <h3 class="title">liste des Catégories</h3>
+                    <div class="order-table table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="col-1">#</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Catégorie</th>
+                                    <th scope="2"></th>
+                                </tr>
+                            </thead>
+                            <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
+                                for(let i = 0; i<category.length; i++) {
+                                %>
+                            <tbody>
+                                <tr>
+                                    <td><%= category[i].cat_id%></td>
+                                    <td class="product-thumbnail" style="font-size: 50px; width: 20px;">
+                                        <img src="/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg" alt="">
+                                        <!-- <i class="flaticon-hamburger"></i> -->
+                                    </td>
+                                    <td class="product-total">
+                                        <span><%= category[i].cat_name%></span>
+                                    </td>
+                                    <td class="text-center">
+
+                                        <button class="btn btn-lg p-0 " type="button" data-bs-toggle="modal" data-bs-target="#category-edit" onclick="set_info('<%=JSON.stringify(category[i]).replace(/'/g, '`').replace(/\\n/g,' ')%>',2)"><i class="bx bxs-edit"></i></button>
+                                        <!-- <button class="btn btn-lg p-0 offset-1 " type="button"><i class="bx bxs-detail"></i></button> -->
+                                        <button class="btn btn-lg p-0 offset-1 " type="button" data-bs-toggle="modal" data-bs-target="#confirmActionModal" onclick="confirmmodal('<%= category[i].cat_id %>',2,'<%= category[i].products %>')"><i class="bx bxs-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <% }
+                        }%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</main>
+
+
+<%- include ("layouts/footer.ejs") %>
+
+<script src="/lib/data_control.js"></script>

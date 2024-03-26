@@ -1,0 +1,23 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">order_client list </h2>                                <div class="d-flex flex-row-reverse">
+                                    <a class="btn btn-sm btn-primary col-lg-2 p-2 m-2" href="/order_client/add">Nouveau</a>
+                                </div>
+<div class="row">
+    <% if (typeof (order_client) != "undefined" &&  order_client.length > 0 ) {
+    for(let i = 0; i<order_client.length; i++) {
+    %>
+        <div class="col-lg-4 text-center mb-3"> 
+            <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="/img/default.png"/>
+            <h3 class="fw-normal"><%= order_client[i].order_client_title%></h3>
+            <p class="text-truncate"><%= order_client[i].order_client_content%></p>
+            <p><a class="btn btn-secondary" href="/order_client/<%= order_client[i].order_id%>/details">Details </a></p>
+        </div>
+    <% }
+    }%>
+</div>
+<%- include ("layouts/footer.ejs") %>
+
+

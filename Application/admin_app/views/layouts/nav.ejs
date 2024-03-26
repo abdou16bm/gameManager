@@ -1,0 +1,311 @@
+<nav id="sidebarMenu" class=" navbar navbar-expand-md navbar-light col-md-2 col-lg-1 d-md-block sidebar collapse">
+    <div class="position-sticky ptb-50" style="font-size: 12px;">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\order_client\admin\list">
+                    Commandes
+                </a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="money">Caisse</a>
+            </li> -->
+            <% if (session.privid == 1) {%>           
+         
+                <li class="nav-item">
+                    <a class="nav-link" href="\category\admin\list">Catégorie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\product\admin\list">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="\option_add\list\1">Sauces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\option_add\list\2">Suppléments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\cash_register\admin\page\1">Etat de caisse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\user\admin\page\1">Utilisateurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="\option_add\list\others">Autres</a>
+                </li>
+           
+            <% } %>
+
+        </ul>
+    </div>
+</nav>
+
+<!-- <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <div class="position-sticky pt-3 sidebar-sticky">
+
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\category\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    category
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\category\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    category
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\category\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    category
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\category\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    category
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option_cat\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option_cat
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option_cat\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option_cat
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option_cat\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option_cat
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\option_cat\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    option_cat
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\order_client\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    order_client
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\order_client\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    order_client
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\order_client\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    order_client
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\order_client\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    order_client
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\privilege\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    privilege
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\privilege\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    privilege
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\privilege\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    privilege
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\privilege\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    privilege
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_detail\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_detail
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_detail\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_detail
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_detail\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_detail
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_detail\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_detail
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_option\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_option
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_option\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_option
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_option\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_option
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\product_option\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    product_option
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\user\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    user
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\user\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    user
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\user\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    user
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\user\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    user
+                    pagination admin </a>
+            </li><br>
+
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\waiting\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    waiting
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\waiting\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    waiting
+                    pagination </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\waiting\admin\list">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    waiting
+                    admin </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="\waiting\admin\page\1">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    waiting
+                    pagination admin </a>
+            </li><br>
+
+            table_name_li
+        </ul>
+        <h6
+            class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+            <span>Configuration</span>
+            <a class="link-secondary" href="#" aria-label="Add a new report">
+                <span data-feather="plus-circle" class="align-text-bottom"></span>
+            </a>
+        </h6>
+        <ul class="nav flex-column mb-2">
+
+            table_name_config
+        </ul>
+    </div>
+</nav> -->

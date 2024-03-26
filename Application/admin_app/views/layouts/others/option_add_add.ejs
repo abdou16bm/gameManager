@@ -1,0 +1,65 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">option add </h2><form id="option_add_form" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+
+    <div class="row g-3">
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="option_type" class="form-label">option_type</label>
+            <input type="text" class="form-control" name="option_type" id="option_type" placeholder="option_type" value="" required input_add>
+            <div class="invalid-feedback">
+                Valid option_type is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="option_name" class="form-label">option_name</label>
+            <input type="text" class="form-control" name="option_name" id="option_name" placeholder="option_name" value="" required input_add>
+            <div class="invalid-feedback">
+                Valid option_name is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="option_price" class="form-label">option_price</label>
+            <input type="text" class="form-control" name="option_price" id="option_price" placeholder="option_price" value="" required input_add>
+            <div class="invalid-feedback">
+                Valid option_price is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="option_pic_count" class="form-label">option_pic_count</label>
+            <input type="text" class="form-control" name="option_pic_count" id="option_pic_count" placeholder="option_pic_count" value="" required input_add>
+            <div class="invalid-feedback">
+                Valid option_pic_count is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="main" class="form-label">main</label>
+            <input type="file" class="form-control" name="main" id="main" placeholder="main" value="main_value"  input_add>
+            <div class="invalid-feedback">
+                Valid main is .
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="file_u" class="form-label">file_u</label>
+            <input type="file" class="form-control" name="file_u" id="file_u" placeholder="file_u" value="file_u_value"   multiple="multiple">
+            <div class="invalid-feedback">
+                Valid file_u is .
+            </div>
+        </div>
+
+table_inputs    </div>
+
+    <hr class="my-4">
+
+    <button class="w-100 btn btn-primary btn-lg" type="submit">add</button>
+</form>
+<%- include ("layouts/footer.ejs") %>
+
+

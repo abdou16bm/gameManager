@@ -1,0 +1,293 @@
+<!--Modal Confirm order -->
+<div class="modal  fade" id="confirmOrderModal" tabindex="-1" aria-labelledby="confirmOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen ">
+        <div class="modal-content">
+            <div class="modal-header mb-5">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <h1 class="mb-5" style="font-size: 115px;" id="confirmOrderModalLabel">Merci pour votre commande</h1>
+                <img class="mb-5" src="/assets/img/food/5.png" alt="" width="480px"> <br>
+                <h1 class="mb-5" style="font-size: 115px;" id="confirmOrderModalLabel">Prenez votre ticket</h1>
+            </div>
+            <div class="modal-footer w-100 align-items-center justify-content-around flex-wrap">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Modal option sauces supplements ...-->
+<div class="modal fade" id="optionsAddModal" tabindex="-1" aria-labelledby="optionsAddModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen ">
+        <div class="modal-content bg-black">
+            <div class="modal-header mb-2">
+                <div class="col-lg-12 col-md-12 justify-content-between d-flex">
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-big btn-danger col-lg-5" style="pointer-events: all; cursor: pointer;">
+                        Annuler
+                        <i class="flaticon-close"></i>
+                        <span style="top: 35.4px; left: 163.4px;"></span>
+                    </button>
+
+
+                    <a class="btn col-lg-5 btn-big btn-success" style="pointer-events: all; cursor: pointer;" id="btn_confirm_product">
+                        Confirmer
+                        <i class="flaticon-close"></i>
+                        <span style="top: 35.4px; left: 163.4px;"></span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="modal-body text-center">
+                <div class="modal-title mb-5">
+                    <h1 class="text-warning">Choisi votre Option</h1>
+                </div>
+                <div class="grid">
+
+                    <% if (typeof(option_add) != "undefined" && option_add != null ) {
+                    for (let i=0; i<option_add.length;i++) {%>
+                        <label class="card-2 col-3" products_data="<%= option_add[i].products_limit%>">
+                            <input class="card-2__input" type="checkbox" value="<%= option_add[i].option_id%>"/>
+                            <div class="card-2__body" products_data="<%= option_add[i].products_limit%>">
+                                <div class="card-2__body-cover">
+                                    <img class="card-2__body-cover-image" src="/api/client/1/img/option_add/<%= option_add[i].option_id%>/main.jpg"/><span class="card-2__body-cover-checkbox">
+                                        <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                        </svg></span></div>
+                                <div class="card-2__body-header">
+                                    <h4 class="card-2__body-header-title"><%= option_add[i].option_name%> <span style="font-size:15px ; color: red;"></span></h4>
+                                </div>
+                            </div>
+                        </label>
+
+                    <%      }
+                    } %>
+                        <!--
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox" value="1" onchange="option_add(1)"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/1.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">mayonnaise <span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/2.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">ketchup <span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/3.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">harissa <span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/4.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">blanche <span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/5.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">algérienne <span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/6.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">barbecue<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/7.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">samouraï<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/8.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">Sans tomate<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/9.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">Sans salade<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/10.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">Sans Oignons<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/11.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">Sans frite<span style="font-size:15px ; color: red;"></span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/12.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">cheddar<span style="font-size:15px ; color: red;"> +50 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/13.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">gruyère<span style="font-size:15px ; color: red;"> +50 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/14.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">camembert<span style="font-size:15px ; color: red;"> +50 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/15.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">champignon<span style="font-size:15px ; color: red;"> +100 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/16.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">Viande<span style="font-size:15px ; color: red;"> +100 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/17.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">poulet<span style="font-size:15px ; color: red;"> +100 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="card-2 col-3">
+                        <input class="card-2__input" type="checkbox"/>
+                        <div class="card-2__body">
+                            <div class="card-2__body-cover"><img class="card-2__body-cover-image" src="/assets/img/option/18.png"/><span class="card-2__body-cover-checkbox">
+                                    <svg class="card-2__body-cover-checkbox&#45;&#45;svg" viewBox="0 0 12 10">
+                                        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                    </svg></span></div>
+                            <div class="card-2__body-header">
+                                <h4 class="card-2__body-header-title">merguez<span style="font-size:15px ; color: red;"> +100 Da</span></h4>
+                            </div>
+                        </div>
+                    </label>
+                --></div>
+            </div>
+            <div class="modal-footer w-100 align-items-center justify-content-around flex-wrap">
+
+            </div>
+        </div>
+    </div>
+</div>

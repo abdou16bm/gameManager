@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zxx">
+
+<!-- Mirrored from templates.envytheme.com/handout/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 08:50:16 GMT -->
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+        <!-- Boxicons CSS -->
+        <link rel="stylesheet" href="/assets/css/boxicons.min.css">
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" href="/assets/css/flaticon.css">
+        <!-- Carousel CSS -->
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <!-- Carousel Default CSS -->
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="/assets/css/nice-select.min.css">
+        <!-- Odometer CSS -->
+        <link rel="stylesheet" href="/assets/css/odometer.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <!-- Dark CSS -->
+        <link rel="stylesheet" href="/assets/css/dark.css">
+        <!-- Responsive CSS -->
+		<link rel="stylesheet" href="/assets/css/responsive.css">
+
+        <title>Pop Way - Fast Food</title>
+
+        <link rel="icon" type="image/ico" href="/assets/img/icon.ico">
+    </head>
+
+    <body class="bg-black">
+
+        <!-- Start Preloader Area -->
+		<div class="preloader">
+			<div class="lds-ripple">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+        <!-- End Preloader Area -->
+
+        <div class="col-lg-7 d-flex flex-column align-items-center justify-content-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="flex: 0">
+                <h1 ondblclick="window.close()" id="time" class="text-right text-white" style="font-size: 400%; margin-right: 10%"></h1>
+            </div>
+        </div>
+
+        <!-- Start Main Slider Area -->
+ <!--       <div class="main-slider-area">
+            <div class="home-slider owl-carousel owl-theme">-->
+                <div class="home-item item-bg2 bg-black">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6">
+                                        <div class="slider-content mx-5">
+                                            <img src="/assets/img/popway.png" alt="image">
+                                            <span class="text-center text-white mb-10 mt-10" style="font-size: 50px;" >Commande</span>
+                                            <h1 class="next_client text-white text-center" style="font-size: 200px;">0</h1>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="slider-image mx-2">
+                                            <img src="/assets/img/logo.png" alt="image">
+
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--            </div>
+        </div>-->
+        <!-- End Main Slider Area -->
+        <!-- Jquery Slim JS -->
+        <script src="/assets/js/jquery.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="/assets/js/bootstrap.bundle.min.js"></script>
+        <!-- Meanmenu JS -->
+        <script src="/assets/js/jquery.meanmenu.js"></script>
+        <!-- Carousel JS -->
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <!-- Magnific Popup JS -->
+        <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <!-- Nice Select JS -->
+        <script src="/assets/js/jquery.nice-select.min.js"></script>
+        <!-- Odometer JS -->
+        <script src="/assets/js/odometer.min.js"></script>
+        <!-- Appear JS -->
+        <script src="/assets/js/jquery.appear.js"></script>
+        <!-- Form Ajaxchimp JS -->
+		<script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+		<!-- Form Validator JS -->
+		<script src="/assets/js/form-validator.min.js"></script>
+		<!-- Contact JS -->
+        <script src="/assets/js/contact-form-script.js"></script>
+        <!-- Wow JS -->
+		<script src="/assets/js/wow.min.js"></script>
+        <!-- Custom JS -->
+        <script src="/assets/js/main.js"></script>
+    </body>
+
+<!-- Mirrored from templates.envytheme.com/handout/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 08:50:50 GMT -->
+</html>
+
+
+
+
+<script src="/js/lib/time.js"></script>
+
+<script src="/js/lib/display_manage.js"></script>
+
+<script>
+
+    showWaiting('<%- JSON.stringify(order).replace(/\\n|\\r/g, " ").replace(/'/g, '`'); %>');
+    setInterval(function (){
+        getOrders()
+    },2000)
+
+/*    let btn_close_window = document.querySelector('#btn_close_window');
+    btn_close_window.addEventListener('click',function (e){
+        e.preventDefault();
+        window.close();
+    })*/
+
+</script>
+

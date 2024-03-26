@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zxx">
+
+<!-- Mirrored from templates.envytheme.com/BlackFood/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 08:50:16 GMT -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="/assets/css/animate.min.css">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="/assets/css/boxicons.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="/assets/css/flaticon.css">
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <!-- Carousel Default CSS -->
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+    <!-- Magnific Popup CSS -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="/assets/css/nice-select.min.css">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="/assets/css/odometer.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Dark CSS -->
+    <link rel="stylesheet" href="/assets/css/dark.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+
+    <link rel="stylesheet" href="/assets/css/mystyle.css">
+
+    <title>Pop Way - Fast Food</title>
+
+    <link rel="icon" type="image/ico" href="/assets/img/icon.ico">
+</head>
+
+<body>
+
+
+<!-- Start Menu Area -->
+<section class="row mt-5">
+    <div class="container">
+        <div class="section-title">
+            <span class="d-flex justify-content-between">
+                <a class="btn btn-success btn-lg " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
+                    Voir Ma Commande
+                </a>
+                <a class="btn btn-danger btn-lg btn_cancel_product" role="button">Annuler ma commande</a>
+            </span>
+        </div>
+        <div class="tab menu-list-tab col-lg-12">
+            <ul class="tabs justify-content-center">
+                <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
+                for(let i = 0; i<category.length; i++) {
+                %>
+                    <li id="cat<%= category[i].cat_id%>" class="catBlock">
+                        <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
+                            <img class="col-6" src="/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg" alt="">
+                            <h1 style="white-space:nowrap; "><%= category[i].cat_name%></h1>
+                        </a>
+                    </li>
+                <% }
+                }%>
+
+            </ul>
+
+            <div class="tab_content scrollbar full_block option_hide ">
+
+                <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
+                for(let i = 0; i<category.length; i++) {
+                %>
+
+                    <div class="tabs_item pt-10">
+                        <div class="row">
+
+                            <% if (typeof (category[i].products) != "undefined" &&  category[i].products.length > 0 ) {
+                            for(let j = 0; j<category[i].products.length; j++) {
+                            %>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="pizza-shop-item">
+                                        <div class="image">
+                                            <img src="/api/client/1/img/product/<%= category[i].products[j].product_id %>/main.jpg"
+                                                 alt="image" style="min-height: 150px;">
+
+                                            <div class="pizza-btn" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
+                                                <a type="button" class="default-btn">Commander<i class="flaticon-play-button"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="content">
+                                            <h1><%= category[i].products[j].product_name %></h1>
+                                            <h4><%= category[i].products[j].product_desig %></h4>
+                                            <h1><%= category[i].products[j].product_price %> da</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <% }
+                            }%>
+
+                        </div>
+                    </div>
+                <% }
+                }%>
+                <div class="col-lg-12 mb-10 mt-10">
+                    <span class=" d-flex justify-content-around">
+                        <a class="btn btn-success btn-lg " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
+                            Voir Ma Commande
+                        </a>
+                        <a class="btn btn-primary btn-lg" id="btnHideContent" role="button">Retour</a>
+                        <a class="btn btn-danger btn-lg btn_cancel_product" role="button">Annuler ma commande</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="order_detail_left" aria-labelledby="orderLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                <div class="welcome-content">
+                    <span>Votre commande</span>
+                </div>
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="col-12" id="order_detail_block">
+
+                <form>
+                    <div class="cart-table table-responsive">
+                        <!--
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th class="col-2">Produit</th>
+                                <th class="col-2">Supplements </th>
+                                <th class="col-2">Sauces </th>
+                                <th class="col-2">Autres </th>
+                                <th class="col-3">Prix </th>
+                                <th class="col-1"> # </th>
+                            </tr>
+                            </thead>
+                        </table>
+-->
+                        <div class="cart-table table-responsive" id="order_table">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th>Produit</th>
+                                    <!--                                    <th>Supplements </th>-->
+                                    <!--                                    <th>Sauces </th>-->
+                                    <!--                                    <th>Autres </th>-->
+                                    <th>Prix </th>
+                                    <th> # </th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                        <div class="cart-buttons">
+                            <div class="row justify-content-between">
+                                <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                    <button class="btn btn-danger col-lg-10 btn-lg btn_cancel_product">Annuler</button>
+                                </div>
+                                <div class="col-lg-6 col-sm-6 col-md-6 text-center">
+                                    <button id="btn_order_confirm" order_id="<%= order_id %>" class="btn btn-success col-lg-10 btn-lg " data-bs-toggle="modal" data-bs-target="#confirmOrderModal">Confirmer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-totals">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h1 class="text-center" style="font-size: 80px;">
+                                        N°<%= order_info[0].order_number %></h1>
+                                </div>
+                                <div class="col-6">
+                                    <h2>Total :</h2>
+                                    <span>
+                                        <h1 id="order_total_price"></h1>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="menu-shape">
+        <div class="shape1">
+            <img src="/assets/img/image-icon/7.png" alt="image">
+        </div>
+        <div class="shape2">
+            <img src="/assets/img/image-icon/4.png" alt="image">
+        </div>
+        <div class="shape3">
+            <img src="/assets/img/image-icon/5.png" alt="image">
+        </div>
+        <div class="shape4">
+            <img src="/assets/img/image-icon/6.png" alt="image">
+        </div>
+    </div>
+</section>
+<!-- End Menu Area -->
+
+<!-- End Copy Right Area -->
+
+<!-- Start Go Top Area -->
+<div class="go-top">
+    <i class="bx bx-chevron-up"></i>
+    <i class="bx bx-chevron-up"></i>
+</div>
+<!-- End Go Top Area -->
+
+<%- include("layout/modal");%>
+
+<!-- Jquery Slim JS -->
+<script src="/assets/js/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<!-- Meanmenu JS -->
+<script src="/assets/js/jquery.meanmenu.js"></script>
+<!-- Carousel JS -->
+<script src="/assets/js/owl.carousel.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Nice Select JS -->
+<script src="/assets/js/jquery.nice-select.min.js"></script>
+<!-- Odometer JS -->
+<script src="/assets/js/odometer.min.js"></script>
+<!-- Appear JS -->
+<script src="/assets/js/jquery.appear.js"></script>
+<!-- Form Ajaxchimp JS -->
+<script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Form Validator JS -->
+<!-- <script src="/assets/js/form-validator.min.js"></script> -->
+<!-- Contact JS -->
+<!-- <script src="/assets/js/contact-form-script.js"></script> -->
+
+<!-- Wow JS -->
+<script src="/assets/js/wow.min.js"></script>
+<!-- Custom JS -->
+<script src="/assets/js/main.js"></script>
+</body>
+
+</html>
+<script src="/js/lib/ticket_manage.js"></script>
+<script src="/js/lib/order_manage.js"></script>
+<script src="/js/lib/tools.js"></script>

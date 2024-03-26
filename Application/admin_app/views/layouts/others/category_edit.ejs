@@ -1,0 +1,49 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">category edit </h2><form id="category_edit_form" class="needs-validation" method="post" enctype="multipart/form-data" novalidate>
+
+    <div class="row g-3">
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="cat_name" class="form-label">cat_name</label>
+            <input type="text" class="form-control" name="cat_name" id="cat_name" placeholder="cat_name" value="<%= category[0].cat_name%>" required input_add>
+            <div class="invalid-feedback">
+                Valid cat_name is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="cat_pic_count" class="form-label">cat_pic_count</label>
+            <input type="text" class="form-control" name="cat_pic_count" id="cat_pic_count" placeholder="cat_pic_count" value="<%= category[0].cat_pic_count%>" required input_add>
+            <div class="invalid-feedback">
+                Valid cat_pic_count is required.
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="main" class="form-label">main</label>
+            <input type="file" class="form-control" name="main" id="main" placeholder="main" value="main_value"  input_add>
+            <div class="invalid-feedback">
+                Valid main is .
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 col-12">
+            <label for="file_u" class="form-label">file_u</label>
+            <input type="file" class="form-control" name="file_u" id="file_u" placeholder="file_u" value="file_u_value"   multiple="multiple">
+            <div class="invalid-feedback">
+                Valid file_u is .
+            </div>
+        </div>
+
+table_inputs    </div>
+
+    <hr class="my-4">
+
+    <button class="w-100 btn btn-primary btn-lg" type="submit">edit</button>
+</form>
+<%- include ("layouts/footer.ejs") %>
+
+

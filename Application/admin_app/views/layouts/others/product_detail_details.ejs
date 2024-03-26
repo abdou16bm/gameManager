@@ -1,0 +1,18 @@
+
+<%- include ("layouts/header.ejs") %>
+
+
+<h2 class="mb-3">product_detail details</h2><% if (typeof (product_detail) != "undefined" &&  product_detail.length > 0 ) { %>
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1"><%= product_detail[0].product_detail_title%> <span class="text-muted">....</span></h2>
+            <p class="lead"><%- product_detail[0].product_detail_content%></p>
+        </div>
+        <div class="col-md-5">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/img/default.png"/>
+        </div>
+    </div>
+<% } %>
+<%- include ("layouts/footer.ejs") %>
+
+
