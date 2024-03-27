@@ -16,9 +16,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-drop database if exists food_management;
-create database food_management;
-use food_management;
+
+drop database if exists game_management;
+create database game_management;
+use game_management;
 --
 -- Table structure for table `category`
 --

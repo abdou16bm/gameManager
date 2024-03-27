@@ -61,10 +61,10 @@
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
                 %>
-                    <li id="cat<%= category[i].cat_id%>" class="catBlock">
+                    <li id="cat<%= category[i].cat_id%>" class="catBlock" >
                         <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
-                            <img class="col-6" src="/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg" alt="">
-                            <h1 style="white-space:nowrap; "><%= category[i].cat_name%></h1>
+                            <img  src="/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg" alt="" style="width: 280px; height: 200px;">
+                            <h4 style="white-space:nowrap; "><%= category[i].cat_name%></h4>
                         </a>
                     </li>
                 <% }
@@ -85,11 +85,11 @@
                             for(let j = 0; j<category[i].products.length; j++) {
                             %>
 
-                                <div class="col-lg-4 col-md-6">
+                                <div class="col-lg-4 col-md-2">
                                     <div class="pizza-shop-item">
                                         <div class="image">
                                             <img src="/api/client/1/img/product/<%= category[i].products[j].product_id %>/main.jpg"
-                                                 alt="image" style="min-height: 150px;">
+                                                 alt="image" style="min-height: 50px;">
 
                                             <div class="pizza-btn" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
                                                 <a type="button" class="default-btn">Commander<i class="flaticon-play-button"></i></a>

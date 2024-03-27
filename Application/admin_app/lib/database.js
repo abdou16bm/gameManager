@@ -5,7 +5,7 @@ let connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : '',
-    database : 'food_management',
+    database : 'game_management',
     multipleStatements : true,
     timezone : 'utc'
 });

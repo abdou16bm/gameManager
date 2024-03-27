@@ -1829,12 +1829,14 @@ Menu Area CSS
 
 .menu-list-tab .tabs li {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 40%;
-          flex: 1 0 40%;
-  max-width: 50%;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
+  max-width: 20%;
+  height: 280px;
   text-align: center;
   margin-right: 5px;
   margin-left: 5px;
+  margin-bottom: 5px;
 }
 
 .menu-list-tab .tabs li a {
@@ -1851,6 +1853,7 @@ Menu Area CSS
   width: 100%;
   text-align: center;
   position: relative;
+  height: 280px;
 }
 
 .menu-list-tab .tabs li a:after {
