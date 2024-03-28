@@ -4742,7 +4742,8 @@ fieldset:disabled .btn {
 
     .navbar-expand-md .navbar-collapse {
         display: flex !important;
-        flex-basis: auto
+        flex-basis: auto;
+        justify-content: end;
     }
 
     .navbar-expand-md .navbar-toggler {

@@ -1,10 +1,10 @@
 .card-2 {
     --background: #fff;
-    --background-checkbox: #ffd000;
-   /*  --background-image: #ffffff, rgba(0, 107, 175, 0.2); */
+    --background-checkbox: #1ab13e;
+    /*  --background-image: #ffffff, rgba(0, 107, 175, 0.2); */
     --text-color: #666;
     --text-headline: #000;
-    --card-2-shadow: #ffd000;
+    --card-2-shadow: #1ab13e;
     --card-2-height: 250px;
     --card-2-width: 250px;
     --card-2-radius: 12px;
@@ -223,14 +223,14 @@
 }
 
 .btn-outline-popway {
-    color: #ffd000;
-    border-color: #ffd000
+    color: #1ab13e;
+    border-color: #1ab13e
 }
 
 .btn-outline-popway:hover {
     color: #ffffff;
-    background-color: #ffd000;
-    border-color: #ffd000
+    background-color: #1ab13e;
+    border-color: #1ab13e
 }
 
 
@@ -256,9 +256,9 @@
     transition: all 0.3s ease-in-out;
     user-select: none;
     font-size: 13px;
-   }
+}
 
-   .fancy::before {
+.fancy::before {
     content: " ";
     width: 1.5625rem;
     height: 2px;
@@ -269,9 +269,9 @@
     transform: translateY(-50%);
     transform-origin: center;
     transition: background 0.3s linear, width 0.3s linear;
-   }
+}
 
-   .fancy .text {
+.fancy .text {
     font-size: 350%;
     line-height: 1.33333em;
     padding-left: 2em;
@@ -280,123 +280,123 @@
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     text-decoration: none;
-    color: #ffd000;
-   }
+    color: #1ab13e;
+}
 
-   .fancy .top-key {
+.fancy .top-key {
     height: 2px;
     width: 6rem;
     top: -2px;
     left: 0.625rem;
     position: absolute;
-    background:  #ffd000;
+    background: #1ab13e;
     transition: width 0.5s ease-out, left 0.3s ease-out;
-   }
+}
 
-   .fancy .bottom-key-1 {
+.fancy .bottom-key-1 {
     height: 2px;
     width: 6rem;
     right: 1.875rem;
     bottom: -2px;
     position: absolute;
-    background:  #ffd000;
+    background: #1ab13e;
     transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
+}
 
-   .fancy .bottom-key-2 {
+.fancy .bottom-key-2 {
     height: 2px;
     width: 0.625rem;
     right: 0.625rem;
     bottom: -2px;
     position: absolute;
-    background:  #ffd000;
+    background: #1ab13e;
     transition: width 0.5s ease-out, right 0.3s ease-out;
-   }
+}
 
-   .fancy:hover {
+.fancy:hover {
     color: white;
     background: black;
-   }
+}
 
-   .fancy:hover::before {
+.fancy:hover::before {
     width: 4rem;
     background: white;
-   }
+}
 
-   .fancy:hover .text {
+.fancy:hover .text {
     color: white;
     padding-left: 1.5em;
-   }
+}
 
-   .fancy:hover .top-key {
+.fancy:hover .top-key {
     left: -2px;
     width: 0px;
-   }
+}
 
-   .fancy:hover .bottom-key-1,
-    .fancy:hover .bottom-key-2 {
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
     right: 0;
     width: 0;
-   }
+}
 
 
-   .card-home {
+.card-home {
     width: 90%;
     height: 95%;
     transition: all 0.2s;
     position: relative;
     cursor: pointer;
     left: 5%;
-  }
+}
 
-  .card-home-inner {
+.card-home-inner {
     width: inherit;
     height: inherit;
-    background: rgba(255,255,255,.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
     border-radius: 8px;
-  }
+}
 
-  .card-home:hover {
+.card-home:hover {
     transform: scale(1.04) rotate(1deg);
-  }
+}
 
-  .circle {
+.circle {
     padding: 5%;
     width: 400px;
     height: 400px;
-    background: radial-gradient( #fbd83b,  #ffd000);
+    background: radial-gradient(#fbd83b, #1ab13e);
     border-radius: 50%;
     position: absolute;
     animation: move-up6 2s ease-in infinite alternate-reverse;
-  }
+}
 
-  .circle:nth-child(1) {
+.circle:nth-child(1) {
     top: -100px;
     left: -85px;
-  }
+}
 
-  .circle:nth-child(2) {
+.circle:nth-child(2) {
     bottom: -85px;
     right: -12px;
     animation-name: move-down1;
-  }
+}
 
-  @keyframes move-up6 {
+@keyframes move-up6 {
     to {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
-  }
+}
 
-  @keyframes move-down1 {
+@keyframes move-down1 {
     to {
-      transform: translateY(10px);
+        transform: translateY(10px);
     }
-  }
+}
 
 
-  /*MyStyle*/
+/*MyStyle*/
 
 #order_table {
     max-height: 1200px;
@@ -407,13 +407,14 @@
     border-collapse: collapse;
 }
 
-#order_table th, #order_table td{
+#order_table th,
+#order_table td {
     padding: 15px 25px;
     text-align: left;
     /*border: solid 1px #ccc;*/
 }
 
-#order_table th{
+#order_table th {
     background-color: #000;
     color: #ffffff;
 }
@@ -430,7 +431,7 @@
 }
 
 
-#order_table td p{
+#order_table td p {
     line-height: 10px;
     padding-right: 40px;
 }
@@ -458,8 +459,9 @@ tr:nth-child(odd){
 
 
 .full_block {
-    padding-top: 20px;
-    background: #ffd000;
+    margin-top: 2%;
+    padding-top: 30px;
+    background: #ffffff;
     height: 100%;
     position: absolute;
     top: 0;
@@ -467,4 +469,77 @@ tr:nth-child(odd){
     left: 0;
     bottom: 0%;
     transition: 2s;
+}
+
+
+.typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: #4FC3F7;
+    animation: cursorBlink 0.8s steps(3) infinite;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    75% {
+        opacity: 1;
+    }
+
+    76%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.typing {
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #3333);
+}
+
+.typing h2 {
+    position: relative;
+    color: #4FC3F7;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    animation: type 5s steps(11) infinite;
+}
+
+@keyframes type {
+
+    0%,
+    100% {
+        width: 0px;
+    }
+
+    30%,
+    60% {
+        width: 394.09px;
+    }
+}
+
+@media(max-width: 330px) {
+    .typing h2 {
+        font-size: 3rem;
+        animation: type 5s steps(10) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
 }

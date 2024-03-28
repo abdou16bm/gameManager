@@ -37,34 +37,39 @@
 
     <link rel="stylesheet" href="/assets/css/mystyle.css">
 
-    <title>Pop Way - Fast Food</title>
+    <title>Dreamgames</title>
 
     <link rel="icon" type="image/ico" href="/assets/img/icon.ico">
 </head>
 
 <body>
-
-
-<!-- Start Menu Area -->
-<section class="row mt-5">
-    <div class="container">
-        <div class="section-title">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
             <span class="d-flex justify-content-between">
-                <a class="btn btn-success btn-lg " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
+                <a class="btn btn-success mr-5 " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
                     Voir Ma Commande
                 </a>
-                <a class="btn btn-danger btn-lg btn_cancel_product" role="button">Annuler ma commande</a>
+                <a class="btn btn-danger btn_cancel_product"  style="margin-left: 15px;" role="button">Annuler ma commande</a>
+                <a class="btn btn-primary" id="btnHideContent" style="margin-left: 15px;" role="button">Retour</a>
             </span>
+  
+          </div>
         </div>
-        <div class="tab menu-list-tab col-lg-12">
+      </nav>
+<!-- Start Menu Area -->
+<section class="mt-5 pt-5">
+    <div class="row">
+        
+        <div class="tab menu-list-tab">
             <ul class="tabs justify-content-center">
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
                 %>
                     <li id="cat<%= category[i].cat_id%>" class="catBlock" >
                         <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
-                            <img  src="/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg" alt="" style="width: 280px; height: 200px;">
-                            <h4 style="white-space:nowrap; "><%= category[i].cat_name%></h4>
+                            <div style="background-image: url('/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg'); height: 80%;  background-size: contain; background-repeat: no-repeat;"></div> 
+                            <h4 class="mb-2" style="white-space:nowrap; "><%= category[i].cat_name%></h4>
                         </a>
                     </li>
                 <% }
@@ -72,7 +77,7 @@
 
             </ul>
 
-            <div class="tab_content scrollbar full_block option_hide ">
+            <div class="tab_content scrollbar full_block option_hide " >
 
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
@@ -85,21 +90,22 @@
                             for(let j = 0; j<category[i].products.length; j++) {
                             %>
 
-                                <div class="col-lg-4 col-md-2">
+                                <div class="col-12 col-md-3">
                                     <div class="pizza-shop-item">
                                         <div class="image">
                                             <img src="/api/client/1/img/product/<%= category[i].products[j].product_id %>/main.jpg"
-                                                 alt="image" style="min-height: 50px;">
+                                                 alt="image" style="height: 350px;">
 
-                                            <div class="pizza-btn" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
-                                                <a type="button" class="default-btn">Commander<i class="flaticon-play-button"></i></a>
-                                            </div>
+                                            
                                         </div>
 
                                         <div class="content">
-                                            <h1><%= category[i].products[j].product_name %></h1>
-                                            <h4><%= category[i].products[j].product_desig %></h4>
-                                            <h1><%= category[i].products[j].product_price %> da</h1>
+                                            <h6><%= category[i].products[j].product_name %></h6>
+                                           <!--  <h4><%= category[i].products[j].product_desig %></h4> -->
+                                            <h4><%= category[i].products[j].product_price %> da</h4>
+                                            <div class="pizza-btn" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
+                                                <a type="button" class="default-btn text-white">Commander<i class="flaticon-play-button"></i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -111,7 +117,7 @@
                     </div>
                 <% }
                 }%>
-                <div class="col-lg-12 mb-10 mt-10">
+                <!-- <div class="col-lg-12 mb-10 mt-10">
                     <span class=" d-flex justify-content-around">
                         <a class="btn btn-success btn-lg " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
                             Voir Ma Commande
@@ -119,7 +125,7 @@
                         <a class="btn btn-primary btn-lg" id="btnHideContent" role="button">Retour</a>
                         <a class="btn btn-danger btn-lg btn_cancel_product" role="button">Annuler ma commande</a>
                     </span>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -206,7 +212,7 @@
     </div>
     <div class="menu-shape">
         <div class="shape1">
-            <img src="/assets/img/image-icon/7.png" alt="image">
+            <img src="/assets/img/image-icon/1.png" alt="image">
         </div>
         <div class="shape2">
             <img src="/assets/img/image-icon/4.png" alt="image">
@@ -215,7 +221,7 @@
             <img src="/assets/img/image-icon/5.png" alt="image">
         </div>
         <div class="shape4">
-            <img src="/assets/img/image-icon/6.png" alt="image">
+            <img src="/assets/img/image-icon/7.png" alt="image">
         </div>
     </div>
 </section>

@@ -4,14 +4,14 @@ const ThermalPrinter = require("node-thermal-printer").printer;
 const PrinterTypes = require("node-thermal-printer").types;
 
 
-const printConfig = fs.readFileSync('./../docDyn/printConfig.json','utf8')
+const printConfig = fs.readFileSync('./../docDyn/printConfig.json', 'utf8')
 const printConfigJson = JSON.parse(printConfig)
 
 
 
 let printerName = printConfigJson.printer;
 // console.log(printerName)
-async function printTicket(number,products,totalPrice,date,time,pic,callback) {
+async function printTicket(number, products, totalPrice, date, time, pic, callback) {
     const printer = new ThermalPrinter({
         type: PrinterTypes.EPSON,
         // interface: "\\\\192.168.1.8\\pos-80",
@@ -21,11 +21,11 @@ async function printTicket(number,products,totalPrice,date,time,pic,callback) {
         // interface: "\\\\DESKTOP-1AJEE7M\\pos-80",
         // interface: "\\\\"+os.hostname()+"\\POS-80",
         // interface: "\\\\"+os.hostname()+"\\POS-80 (copy 1)",
-        interface: "\\\\"+os.hostname()+"\\"+printerName,
+        interface: "\\\\" + os.hostname() + "\\" + printerName,
         // characterSet: 'SLOVENIA',                                 // Printer character set - default: SLOVENIA
         removeSpecialCharacters: false,                            // Removes special characters - default: false
         lineCharacter: "=",                                       // Set character for lines - default: "-"
-        options:{                                                   // Additional options
+        options: {                                                   // Additional options
             timeout: 5000                                          // Connection timeout (ms) [applicable only for network printers] - default: 3000
         }
     });
@@ -47,23 +47,23 @@ async function printTicket(number,products,totalPrice,date,time,pic,callback) {
     printer.alignCenter();
     printer.newLine();
     printer.setTextNormal();
-    printer.setTextSize(3,3);
+    printer.setTextSize(3, 3);
     printer.println(number);
     printer.newLine();
     printer.setTextNormal();
-    printer.println(date+" - "+time);
+    printer.println(date + " - " + time);
     printer.newLine();
 
-    for(let  i=0;i < products.length; i++){
+    for (let i = 0; i < products.length; i++) {
         totalPrice1 += products[i].detail_price;
-        printer.leftRight(products[i].product_name, products[i].detail_price+" DA");
-        if(products[i].supplements.length > 0) printer.leftRight(products[i].supplements,"")
-        if(products[i].sauces.length > 0) printer.leftRight(products[i].sauces,"")
-        if(products[i].others.length > 0) printer.leftRight(products[i].others,"")
+        printer.leftRight(products[i].product_name, products[i].detail_price + " DA");
+        if (products[i].supplements.length > 0) printer.leftRight(products[i].supplements, "")
+        if (products[i].sauces.length > 0) printer.leftRight(products[i].sauces, "")
+        if (products[i].others.length > 0) printer.leftRight(products[i].others, "")
         printer.newLine();
     }
 
-    printer.leftRight("Total :",totalPrice1+" DA");
+    printer.leftRight("Total :", totalPrice1 + " DA");
     printer.alignCenter();
     printer.setTextNormal();
     await printer.printImage(pic);
@@ -72,13 +72,13 @@ async function printTicket(number,products,totalPrice,date,time,pic,callback) {
     printer.println("Merci de votre visite et a bientot");
     printer.newLine();
     printer.setTextNormal();
-    printer.println("PopWay - 05 61 27 70 39");
+    printer.println("Dreamgames - 05 55 55 83 20 - 06 58 07 00 08");
 
     printer.cut();
 
     const err = printer.execute();
 
-    if (callback){callback(err,isConnected)};
+    if (callback) { callback(err, isConnected) };
     return isConnected;
 
 }

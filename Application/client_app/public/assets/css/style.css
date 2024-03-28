@@ -87,7 +87,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #fbb403;
+  color: #1ab13e;
   text-decoration: none;
 }
 
@@ -177,7 +177,7 @@ img {
   overflow: hidden;
   z-index: 1;
   text-transform: capitalize;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #1d1d1d;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -235,7 +235,7 @@ img {
 
 .section-title span {
   font-size: 25px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
   font-weight: 400;
   line-height: 1;
@@ -277,7 +277,7 @@ Preloader Area CSS
 
 .preloader .lds-ripple div {
   position: absolute;
-  border: 4px solid #fbb403;
+  border: 4px solid #1ab13e;
   opacity: 1;
   border-radius: 50%;
   -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -388,7 +388,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item a:hover, .main-navbar .navbar .navbar-nav .nav-item a:focus, .main-navbar .navbar .navbar-nav .nav-item a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item:last-child {
@@ -400,7 +400,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item:hover a, .main-navbar .navbar .navbar-nav .nav-item.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
@@ -448,7 +448,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
   letter-spacing: 1px;
 }
 
@@ -465,7 +465,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -480,7 +480,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -495,7 +495,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -510,7 +510,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -525,7 +525,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu {
@@ -540,11 +540,11 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:hover, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a:focus, .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -553,7 +553,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -562,7 +562,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -571,7 +571,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -580,7 +580,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li:hover .dropdown-menu {
@@ -589,7 +589,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li.active a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
@@ -665,7 +665,7 @@ Navbar Area CSS
 }
 
 .navbar-area.is-sticky .main-navbar .navbar .navbar-nav .nav-item a:hover, .navbar-area.is-sticky .main-navbar .navbar .navbar-nav .nav-item a:focus, .navbar-area.is-sticky .main-navbar .navbar .navbar-nav .nav-item a.active {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .navbar-area.is-sticky .main-navbar .navbar .others-options .option-item .cart-btn a {
@@ -780,7 +780,7 @@ Navbar Area CSS
 }
 
 .others-option-for-responsive .dot-menu:hover .inner .circle {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .others-option-for-responsive .container {
@@ -840,7 +840,7 @@ Navbar Area CSS
   text-align: center;
   line-height: 18px;
   border-radius: 50%;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -857,7 +857,7 @@ Navbar Area CSS
     font-size: 15px;
   }
   .main-responsive-nav .main-responsive-menu.mean-container .mean-nav ul li a.active {
-    color: #fbb403;
+    color: #1ab13e;
   }
   .main-responsive-nav .main-responsive-menu.mean-container .mean-nav ul li a i {
     display: none;
@@ -967,7 +967,7 @@ Main Banner Area CSS
 
 .home-slider .home-item .slider-content .list li i {
   margin-right: 5px;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .home-slider.owl-theme .owl-nav {
@@ -1031,7 +1031,7 @@ Main Banner Area CSS
 
 .home-slider.owl-theme .owl-nav [class*=owl-]:hover {
   color: #ffffff !important;
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .slider-image {
@@ -1091,7 +1091,7 @@ Main Banner Area CSS
 }
 
 .slider-image .shape .dollar i:hover {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
 }
 
@@ -1374,7 +1374,7 @@ Others Area CSS
 }
 
 .others-item.two:hover::before {
-  border-right: 15px solid #fbb403;
+  border-right: 15px solid #1ab13e;
   border-left: 15px solid transparent;
 }
 
@@ -1393,12 +1393,12 @@ Others Area CSS
 .others-item:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .others-item:hover::before {
   border: 15px solid transparent;
-  border-left: 15px solid #fbb403;
+  border-left: 15px solid #1ab13e;
 }
 
 .others-item:hover h3 {
@@ -1431,7 +1431,7 @@ Burger Shop Area CSS
 
 .burger-shop-slider .burger-shop-item {
   text-align: center;
-  border: 1px dashed #fbb403;
+  border: 1px dashed #1ab13e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 5px;
@@ -1482,7 +1482,7 @@ Burger Shop Area CSS
 }
 
 .burger-shop-slider .burger-shop-item .image img {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .burger-shop-slider .burger-shop-item .content {
@@ -1515,7 +1515,7 @@ Burger Shop Area CSS
 }
 
 .burger-shop-slider .burger-shop-item:hover .image::before {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .burger-shop-slider.owl-theme .owl-dots .owl-dot span {
@@ -1672,7 +1672,7 @@ Video Area CSS
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   -webkit-animation: ripple 1s linear 1s infinite;
           animation: ripple 1s linear 1s infinite;
 }
@@ -1687,13 +1687,13 @@ Video Area CSS
   bottom: 0;
   left: 0;
   border-radius: 50%;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   -webkit-animation: ripple 1s linear infinite;
           animation: ripple 1s linear infinite;
 }
 
 .video-content .image .video-btn:hover, .video-content .image .video-btn .video-content .video-btn:focus {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
 }
 
@@ -1735,7 +1735,7 @@ Video Area CSS
 Fun Facts Area CSS
 =================================================*/
 .fun-facts-area {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   position: relative;
   z-index: 1;
 }
@@ -2061,19 +2061,19 @@ Gallery Area CSS
 .gallery-slider .gallery-item .image .content span {
   font-size: 15px;
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   padding: 5px 20px;
   display: inline-block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .gallery-slider .gallery-item .image .content span:hover {
   background-color: transparent;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .gallery-slider .gallery-item .image .content h3 {
@@ -2215,7 +2215,7 @@ Delivery Area CSS
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   -webkit-transition: width 0.5s ease-in-out, 
  height 0.5s ease-in-out;
   transition: width 0.5s ease-in-out, 
@@ -2431,7 +2431,7 @@ Overview Area CSS
   color: #1d1d1d;
   font-weight: 500;
   padding: 5px 15px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   border-radius: 5px;
 }
 
@@ -2457,7 +2457,7 @@ Overview Area CSS
 }
 
 .overview-item .content .default-btn span {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .overview-item .dollar {
@@ -2591,7 +2591,7 @@ Blog Area CSS
   height: 30px;
   width: 30px;
   line-height: 30px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
   text-align: center;
   border-radius: 50px;
@@ -2686,7 +2686,7 @@ Banner Area CSS
   height: 60px;
   width: 60px;
   line-height: 60px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #1d1d1d;
   font-size: 20px;
   border-radius: 50px;
@@ -2702,7 +2702,7 @@ Banner Area CSS
 
 .banner-content .dollar .text i:hover {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .banner-shape {
@@ -2742,7 +2742,7 @@ Pizza Shop Area CSS
 .pizza-shop-item .image {
   position: relative;
   z-index: 1;
-  padding: 10px 35px 35px 35px;
+/*   padding: 10px 35px 35px 35px; */
 }
 
 .pizza-shop-item .image::before {
@@ -2804,7 +2804,7 @@ Pizza Shop Area CSS
 .pizza-shop-item .content span {
   font-size: 18px;
   font-weight: bold;
-  color: #fecf08;
+  color: #304fff;
 }
 
 .pizza-shop-item:hover {
@@ -2815,7 +2815,7 @@ Pizza Shop Area CSS
 }
 
 .pizza-shop-item:hover .image::before {
-  background-color: #fecf08;
+  background-color: #304fff;
 }
 
 .pizza-shop-btn {
@@ -2870,7 +2870,7 @@ History Area CSS
 
 .history-content span {
   font-size: 25px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
 }
 
@@ -2896,7 +2896,7 @@ History Area CSS
 }
 
 .history-content .history-btn .default-btn span {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 /*================================================
@@ -2909,7 +2909,7 @@ Services Area CSS
 
 .services-content span {
   font-size: 25px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
   font-weight: 400;
   line-height: 1;
@@ -2960,7 +2960,7 @@ Services Area CSS
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   -webkit-transition: width 0.5s ease-in-out, 
  height 0.5s ease-in-out;
   transition: width 0.5s ease-in-out, 
@@ -3049,7 +3049,7 @@ App Area CSS
 
 .app-content span {
   font-size: 25px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
   font-weight: 400;
   line-height: 1;
@@ -3229,7 +3229,7 @@ Pizza Box Area CSS
 =================================================*/
 .pizza-box-content span {
   font-size: 25px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
   font-weight: 400;
   line-height: 1;
@@ -3317,7 +3317,7 @@ Pizza Box Area CSS
   height: 70px;
   width: 70px;
   line-height: 70px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #1d1d1d;
   font-size: 30px;
   border-radius: 50px;
@@ -3532,7 +3532,7 @@ Banner Area Three CSS
 }
 
 .banner-area-three .banner-content .banner-btn .default-btn span {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .banner-area-three .banner-content .banner-btn strong {
@@ -3968,7 +3968,7 @@ Page Title Area CSS
 }
 
 .page-title-content ul li a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .page-title-content ul li:last-child {
@@ -3997,7 +3997,7 @@ About Area CSS
 .about-content span {
   font-size: 25px;
   font-family: "Pangolin", cursive;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .about-content h3 {
@@ -4101,7 +4101,7 @@ Team Area CSS
 }
 
 .team-slider .team-item .image .social li a i:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .team-slider .team-item .content {
@@ -4227,7 +4227,7 @@ Team Area CSS
   text-align: center;
   position: relative;
   font-size: 16px;
-  color: #fbb403;
+  color: #1ab13e;
   border-radius: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -4246,7 +4246,7 @@ Team Area CSS
 
 .single-team .image .social li a:hover {
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .single-team .image .social li:nth-child(1) {
@@ -4306,7 +4306,7 @@ Team Area CSS
 }
 
 .single-team:hover .image .content {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .single-team:hover .image .content h3 {
@@ -4537,7 +4537,7 @@ Sidebar Widget Area CSS
 .widget-area .widget .widget-title::before {
   content: '';
   position: absolute;
-  background: #fbb403;
+  background: #1ab13e;
   bottom: -1px;
   left: 0;
   width: 50px;
@@ -4592,7 +4592,7 @@ Sidebar Widget Area CSS
   z-index: 1;
   border: none;
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
@@ -4757,9 +4757,9 @@ Sidebar Widget Area CSS
 
 .widget-area .tagcloud a:hover, .widget-area .tagcloud a:focus {
   color: #ffffff;
-  background-color: #fbb403;
-  border-color: #fbb403;
-  border: 1px solid #fbb403;
+  background-color: #1ab13e;
+  border-color: #1ab13e;
+  border: 1px solid #1ab13e;
 }
 
 /*================================================
@@ -4823,7 +4823,7 @@ FAQ Area CSS
   width: 40px;
   text-align: center;
   height: 100%;
-  background: #fbb403;
+  background: #1ab13e;
   color: #ffffff;
 }
 
@@ -4964,7 +4964,7 @@ Sign In CSS
 }
 
 .sign-in-form form .form-control:focus {
-  border-color: #fbb403;
+  border-color: #1ab13e;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5039,7 +5039,7 @@ Sign In CSS
 }
 
 .sign-in-form form span a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .sign-in-form .forgot-password {
@@ -5053,7 +5053,7 @@ Sign In CSS
 }
 
 .sign-in-form .forgot-password a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 /*================================================
@@ -5090,7 +5090,7 @@ Sign Up CSS
 }
 
 .signup-form form .form-control:focus {
-  border-color: #fbb403;
+  border-color: #1ab13e;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5164,7 +5164,7 @@ Sign Up CSS
 }
 
 .signup-form form span a {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 /*================================================
@@ -5194,7 +5194,7 @@ Sign Up CSS
 
 .error-content .default-btn {
   display: inline-block;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   padding: 14px 30px;
   border-radius: 30px;
   color: #ffffff;
@@ -5219,7 +5219,7 @@ Privacy Area CSS
   width: 80px;
   height: 80px;
   line-height: 90px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   border-radius: 10px;
   color: #ffffff;
   position: absolute;
@@ -5250,7 +5250,7 @@ Privacy Area CSS
   bottom: 0;
   left: 0;
   border-radius: 10px;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   -webkit-animation: ripple 2s linear 1s infinite;
           animation: ripple 2s linear 1s infinite;
 }
@@ -5265,14 +5265,14 @@ Privacy Area CSS
   bottom: 0;
   left: 0;
   border-radius: 10px;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   -webkit-animation: ripple 2s linear infinite;
           animation: ripple 2s linear infinite;
 }
 
 .privacy-image .video-btn:hover, .privacy-image .video-btn .video-content .video-btn:focus {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .single-privacy h3 {
@@ -5325,7 +5325,7 @@ Shop Area CSS
 }
 
 .woocommerce-topbar .woocommerce-topbar-ordering .nice-select .list .option:hover {
-  background-color: #fbb403 !important;
+  background-color: #1ab13e !important;
   color: #ffffff;
 }
 
@@ -5383,7 +5383,7 @@ Shop Area CSS
 
 .single-product .product-image .add-to-cart-btn:hover {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .single-product .product-content {
@@ -5443,7 +5443,7 @@ Shop Area CSS
   top: 0;
   width: 100%;
   height: 0;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   z-index: -1;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -5522,11 +5522,11 @@ Cart Area CSS
 }
 
 .cart-table table tbody tr td.product-name a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-subtotal .remove {
-  color: #fbb403;
+  color: #1ab13e;
   float: right;
   position: relative;
   top: -1px;
@@ -5564,12 +5564,12 @@ Cart Area CSS
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter span:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter input {
   height: 45px;
-  color: #fbb403;
+  color: #1ab13e;
   outline: 0;
   display: block;
   border: none;
@@ -5584,19 +5584,19 @@ Cart Area CSS
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter input::-webkit-input-placeholder {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter input:-ms-input-placeholder {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter input::-ms-input-placeholder {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-quantity .input-counter input::placeholder {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .cart-table table tbody tr td.product-subtotal {
@@ -5618,7 +5618,7 @@ Cart Area CSS
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
 }
 
 .cart-buttons .shopping-coupon-code button {
@@ -5626,7 +5626,7 @@ Cart Area CSS
   right: 0;
   top: 0;
   height: 53px;
-  background: #fbb403;
+  background: #1ab13e;
   color: #ffffff;
   border: none;
   padding: 0 25px;
@@ -5649,16 +5649,16 @@ Cart Area CSS
 
 .cart-buttons .default-btn {
   padding: 14px 30px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
   text-decoration: none;
   display: inline-block;
 }
 
 .cart-buttons .default-btn:hover {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
   -webkit-transition: .6s;
   transition: .6s;
 }
@@ -5755,7 +5755,7 @@ Checkout Area CSS
 }
 
 .user-actions span a:hover, .user-actions span a:focus {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .billing-details .title {
@@ -5770,7 +5770,7 @@ Checkout Area CSS
 .billing-details .title::before {
   content: '';
   position: absolute;
-  background: #fbb403;
+  background: #1ab13e;
   bottom: -1px;
   left: 0;
   width: 50px;
@@ -5820,7 +5820,7 @@ Checkout Area CSS
 }
 
 .billing-details .form-group .nice-select .list .option:hover {
-  background-color: #fbb403 !important;
+  background-color: #1ab13e !important;
   color: #ffffff;
 }
 
@@ -5841,7 +5841,7 @@ Checkout Area CSS
 }
 
 .billing-details .form-group .form-control:focus {
-  border-color: #fbb403;
+  border-color: #1ab13e;
   outline: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -5883,7 +5883,7 @@ Checkout Area CSS
 .order-details .title::before {
   content: '';
   position: absolute;
-  background: #fbb403;
+  background: #1ab13e;
   bottom: -1px;
   left: 0;
   width: 50px;
@@ -5925,7 +5925,7 @@ Checkout Area CSS
 }
 
 .order-details .order-table table tbody tr td.product-name a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .order-details .order-table table tbody tr td.order-subtotal span, .order-details .order-table table tbody tr td.order-shipping span, .order-details .order-table table tbody tr td.total-price span {
@@ -5975,7 +5975,7 @@ Checkout Area CSS
   content: '';
   width: 12px;
   height: 12px;
-  background: #fbb403;
+  background: #1ab13e;
   position: absolute;
   top: 6px;
   left: 3px;
@@ -6052,8 +6052,8 @@ Product Details Area CSS
 }
 
 .product-details-desc .product-review .rating-count:hover {
-  color: #fbb403;
-  border-color: #fbb403;
+  color: #1ab13e;
+  border-color: #1ab13e;
   text-decoration: none;
 }
 
@@ -6092,7 +6092,7 @@ Product Details Area CSS
 }
 
 .product-details-desc .product-add-to-cart .input-counter span:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .product-details-desc .product-add-to-cart .input-counter input {
@@ -6128,9 +6128,9 @@ Product Details Area CSS
   position: relative;
   border: none;
   padding: 12px 30px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
 }
 
 .product-details-desc .product-add-to-cart .default-btn i {
@@ -6139,7 +6139,7 @@ Product Details Area CSS
 
 .product-details-desc .product-add-to-cart .default-btn:hover {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
   -webkit-transition: .6s;
   transition: .6s;
 }
@@ -6226,12 +6226,12 @@ Product Details Area CSS
 }
 
 .product-details-desc .buy-checkbox-btn .cbx:hover span:first-child {
-  border-color: #fbb403;
+  border-color: #1ab13e;
 }
 
 .product-details-desc .buy-checkbox-btn .inp-cbx:checked + .cbx span:first-child {
-  background: #fbb403;
-  border-color: #fbb403;
+  background: #1ab13e;
+  border-color: #1ab13e;
   -webkit-animation: wave 0.4s ease;
           animation: wave 0.4s ease;
 }
@@ -6264,7 +6264,7 @@ Product Details Area CSS
 }
 
 .product-details-desc .buy-checkbox-btn .btn-light:hover {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff;
 }
 
@@ -6319,14 +6319,14 @@ Product Details Area CSS
 
 .products-details-tab .tabs li a:hover, .products-details-tab .tabs li a:focus {
   color: #ffffff;
-  background-color: #fbb403;
-  border-color: #fbb403;
+  background-color: #1ab13e;
+  border-color: #1ab13e;
 }
 
 .products-details-tab .tabs li.current a {
   color: #ffffff;
-  background-color: #fbb403;
-  border-color: #fbb403;
+  background-color: #1ab13e;
+  border-color: #1ab13e;
 }
 
 .products-details-tab .tabs li:last-child {
@@ -6414,8 +6414,8 @@ Product Details Area CSS
   right: 0;
   bottom: 0;
   padding: 14px 25px;
-  background-color: #fbb403;
-  border: 1px solid #fbb403;
+  background-color: #1ab13e;
+  border: 1px solid #1ab13e;
   color: #ffffff;
   -webkit-transition: .6s;
   transition: .6s;
@@ -6423,7 +6423,7 @@ Product Details Area CSS
 
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-title .default-btn:hover {
   background-color: #ffffff;
-  color: #fbb403;
+  color: #1ab13e;
   text-decoration: none;
 }
 
@@ -6479,7 +6479,7 @@ Product Details Area CSS
 }
 
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-comments .review-item .review-report-link:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .products-details-tab .tab_content .tabs_item .products-details-tab-content .product-review-form .review-form {
@@ -6522,7 +6522,7 @@ Product Details Area CSS
 
 .related-products .products-title span {
   font-size: 14px;
-  color: #fbb403;
+  color: #1ab13e;
   font-family: "Pangolin", cursive;
 }
 
@@ -6560,7 +6560,7 @@ Pagination Area CSS
 }
 
 .pagination-area .page-numbers.current, .pagination-area .page-numbers:hover, .pagination-area .page-numbers:focus {
-  background: #fbb403;
+  background: #1ab13e;
   color: #ffffff;
   -webkit-box-shadow: 0 2px 10px 0 #d8dde6;
           box-shadow: 0 2px 10px 0 #d8dde6;
@@ -6674,7 +6674,7 @@ Contact Area CSS
   font-weight: 500;
   font-family: "Pangolin", cursive;
   font-size: 18px;
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .contact-form .title h3 {
@@ -6701,7 +6701,7 @@ Contact Area CSS
 
 .contact-form .form-group .form-control:focus {
   background-color: transparent;
-  border-color: #fbb403;
+  border-color: #1ab13e;
   outline: 0;
   -webkit-box-shadow: unset;
           box-shadow: unset;
@@ -6919,7 +6919,7 @@ Blog Details Area CSS
 }
 
 .blog-details-desc .post-tags .links-list .tags li:hover {
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .blog-details-desc .post-tags .links-list .tags li:hover a {
@@ -6959,7 +6959,7 @@ Blog Details Area CSS
 
 .blog-details-desc .post-tags .links-list .social-tags .article-share .social li a {
   display: block;
-  color: #fbb403;
+  color: #1ab13e;
   width: 40px;
   height: 40px;
   line-height: 44px;
@@ -6972,10 +6972,10 @@ Blog Details Area CSS
 
 .blog-details-desc .post-tags .links-list .social-tags .article-share .social li a:hover {
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
 }
 
 .blog-details-desc .post-tags .links-list .social-tags .article-share .social li a.1da1f2 {
@@ -7057,7 +7057,7 @@ Blog Details Area CSS
 
 .blog-details-desc .post-autor .content .social li a {
   display: block;
-  color: #fbb403;
+  color: #1ab13e;
   width: 40px;
   height: 40px;
   line-height: 44px;
@@ -7070,10 +7070,10 @@ Blog Details Area CSS
 
 .blog-details-desc .post-autor .content .social li a:hover {
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
 }
 
 .blog-details-desc .post-autor .content .social li a.1da1f2 {
@@ -7241,7 +7241,7 @@ blockquote::after, .blockquote::after {
 }
 
 .comments-area .comment-metadata a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .comments-area .comment-respond {
@@ -7372,7 +7372,7 @@ blockquote::after, .blockquote::after {
 Book Table Area CSS
 =================================================*/
 .book-table-area .row {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   border-radius: 10px;
   padding: 30px;
 }
@@ -7468,7 +7468,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .table li span {
-  color: #fbb403;
+  color: #1ab13e;
   float: right;
 }
 
@@ -7502,7 +7502,7 @@ Footer Area CSS
 
 .single-footer-widget .contact-info li i {
   font-size: 20px;
-  color: #fbb403;
+  color: #1ab13e;
   line-height: unset;
   margin-right: 5px;
   position: absolute;
@@ -7516,7 +7516,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .contact-info a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .single-footer-widget .social {
@@ -7549,8 +7549,8 @@ Footer Area CSS
 }
 
 .single-footer-widget .social li a i:hover {
-  background-color: #fbb403;
-  border: 1px solid #fbb403;
+  background-color: #1ab13e;
+  border: 1px solid #1ab13e;
   color: #ffffff;
 }
 
@@ -7645,7 +7645,7 @@ Footer Area CSS
 }
 
 .footer-bottom-area p a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .footer-bottom-area .social {
@@ -7678,8 +7678,8 @@ Footer Area CSS
 }
 
 .footer-bottom-area .social li a i:hover {
-  background-color: #fbb403;
-  border: 1px solid #fbb403;
+  background-color: #1ab13e;
+  border: 1px solid #1ab13e;
   color: #ffffff;
 }
 
@@ -7745,7 +7745,7 @@ Copy Right Area CSS
 .copyright-area .copyright-area-content p a {
   display: inline-block;
   font-weight: 600;
-  color: #fbb403;
+  color: #1ab13e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -7776,7 +7776,7 @@ Copy Right Area CSS
 }
 
 .copyright-area .copyright-area-content ul li a:hover {
-  color: #fbb403;
+  color: #1ab13e;
 }
 
 .copyright-area .copyright-area-content ul li::before {
@@ -7786,7 +7786,7 @@ Copy Right Area CSS
   right: -13px;
   width: 1px;
   height: 14px;
-  background-color: #fbb403;
+  background-color: #1ab13e;
 }
 
 .copyright-area .copyright-area-content ul li:last-child {
@@ -7810,7 +7810,7 @@ Go Top CSS
   top: 0;
   right: 15px;
   color: #ffffff;
-  background-color: #fbb403;
+  background-color: #1ab13e;
   z-index: 4;
   width: 40px;
   text-align: center;
@@ -7821,7 +7821,7 @@ Go Top CSS
   -webkit-transition: .9s;
   transition: .9s;
   border-radius: 50%;
-  border: 1px solid #fbb403;
+  border: 1px solid #1ab13e;
 }
 
 .go-top.active {
@@ -7916,7 +7916,7 @@ Buy Now Btn
 }
 
 .buy-now-btn:hover {
-  background-color: #fbb403;
+  background-color: #1ab13e;
   color: #ffffff !important;
 }
 
