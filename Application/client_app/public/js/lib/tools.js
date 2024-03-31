@@ -14,6 +14,8 @@ if (catBlock != null && typeof catBlock != 'undefined' && btnHideContent != null
     }
 
     btnHideContent.addEventListener('click',function (){
-        tab_content.classList.add('option_hide')
+        
+        tab_content.classList.contains("option_hide") != true ? tab_content.classList.add('option_hide') : location.replace("/")
+
     })
 }
