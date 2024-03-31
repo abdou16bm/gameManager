@@ -318,3 +318,27 @@ const product_filter = function (req,res) {
 exports.product_filter = product_filter
 
 
+
+const product_status_update = function (req,res) {
+
+    const idp = req.query.idp;
+    const status = req.query.status
+
+    console.log("stat : ",status)
+
+    if (!idp || !status) res.send({err : {code : "DATA_MISSED"}})
+    else {
+
+        product_module.product_update(idp,{product_status : status},function (err,result1) {
+
+            res.send({result_update : result1, err : err});
+
+        });
+
+    }
+
+};
+
+
+
+exports.product_status_update = product_status_update

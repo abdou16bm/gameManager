@@ -5,7 +5,7 @@ const product_get_all = function(callback){
      '\n inner join category on product.cat_id = category.cat_id' +
      ' order by category.cat_id, product_name ASC ';*/
 
- let sql = "SELECT product.product_id, product_ref, product_name, product_desig,\n" +
+ let sql = "SELECT product.product_id, product_ref, product_name, product_desig,product_status,\n" +
      "       product_price, product_pic_count, product.cat_id,\n" +
      "       cat_name, cat_pic_count,group_concat(pol.option_id)'product_optionsId',\n" +
      "       group_concat(option_name)'product_optionsName' from product\n" +

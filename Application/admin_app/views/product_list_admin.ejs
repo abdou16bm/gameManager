@@ -16,7 +16,7 @@
             <div class="col-lg-12 col-md-12 pb-5 ">
                 <div class="order-details">
                     <div class="order-table table-responsive ">
-                        <table id="myDatatable" class="table table-bordered">
+                        <table id="myDatatable" class="table table-bordered myTable-product">
                             <thead>
                             <tr>
                                 <!-- <th scope="col">#</th> -->
@@ -26,6 +26,7 @@
                              <!--    <th scope="col" class="col-4">ingrédients</th>
                                 <th scope="col">Option</th> -->
                                 <th scope="col">Prix</th>
+                                <th scope="col">Visibilité</th>
                                 <th scope="2" class="col-1"></th>
                             </tr>
                             </thead>
@@ -43,6 +44,15 @@
                                         <!--<td style="font-size: 10px;"> <%= product[i].product_desig%></td>
                                         <td style="font-size: 10px;"> <%= product[i].product_option%></td> -->
                                         <td><%= product[i].product_price%> da</td>
+                                        <td>
+                                            <div class="mySwitch-block" idp = "<%= product[i].product_id %>">                                
+                                                <label class="mySwitch me-1">
+                                                    <input type="checkbox" <%= product[i].product_status == 1 ? "checked" : "" %>>
+                                                    <span class="mySlider myRound"></span>
+                                                </label>
+                                                <small class="product-status"><%= product[i].product_status == 1 ? "Visible" : "Non visible" %></small>
+                                            </div>
+                                        </td>
                                         <td class="text-center">
                                             <button class="btn btn-lg p-0 " type="button" data-bs-toggle="modal" data-bs-target="#product-edit" onclick="set_info('<%=JSON.stringify(product[i]).replace(/'/g, '`').replace(/\\n/g,' ')%>',1)"><i class="bx bxs-edit"></i></button>
                                             <!-- <button class="btn btn-lg p-0 offset-1 " type="button" class="bx bxs-detail"></i></button> -->

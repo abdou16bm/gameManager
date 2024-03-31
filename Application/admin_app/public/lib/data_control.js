@@ -1,5 +1,6 @@
 let confirmDelMessage = "Etes-vous sure de vouloir supprimer ?";
 let confirmValidationMessage = "Etes-vous sure de vouloir confirmer ?";
+const myTable_product = document.querySelector(".myTable-product")
 
 
 const confirmmodal = function(id,type,info){
@@ -167,6 +168,53 @@ const set_info = function (info,type){
         modal_inputs[5].value = edit_info.user_name;
 
 
+    }
+
+}
+
+
+if (myTable_product) {
+
+    const mySwitch_list = myTable_product.querySelectorAll(".mySwitch-block")
+    if (mySwitch_list.length > 0) {
+        
+        mySwitch_list.forEach(mySwitch => {
+            
+            const idp = mySwitch.getAttribute("idp");
+            const input = mySwitch.querySelector("input");
+            const product_status = mySwitch.querySelector(".product-status");
+
+            if (idp && input && product_status) {
+
+                input.addEventListener("input",()=>{
+
+                    let status = 0
+                    input.checked != true ? status = 0 : status = 1
+
+                    fetch("/api/product/status/update?idp="+idp+"&status="+status)
+                    .then(response => response.json())
+                    .then(result => {
+
+                        if (result.err != null) {
+                            
+                            if (result.err.code = "DATA_MISSED") console.log("data missed")
+                            else console.log(result.err)
+
+                        } else {
+
+                            console.log("success")
+                            status == 0 ? product_status.innerHTML = "Non visible" : product_status.innerHTML = "Visible"
+
+                        }
+
+                    })
+
+                })
+    
+            }
+
+        });
+        
     }
 
 }
