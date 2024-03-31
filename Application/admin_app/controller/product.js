@@ -324,18 +324,23 @@ const product_status_update = function (req,res) {
     const idp = req.query.idp;
     const status = req.query.status
 
-    console.log("stat : ",status)
+    console.log("status : ",status)
 
-    if (!idp || !status) res.send({err : {code : "DATA_MISSED"}})
-    else {
+    if (
 
+        typeof(idp) != "undefined" && idp != null && idp != "" 
+        && typeof(status) != "undefined" && status != null && status != ""
+    
+    ) { 
+        
         product_module.product_update(idp,{product_status : status},function (err,result1) {
 
             res.send({result_update : result1, err : err});
 
         });
+      
 
-    }
+    } else res.send({err : {code : "DATA_MISSED"}})
 
 };
 

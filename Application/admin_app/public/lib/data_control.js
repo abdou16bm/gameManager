@@ -175,6 +175,48 @@ const set_info = function (info,type){
 
 if (myTable_product) {
 
+    function status_update(checked,idp) {
+        
+        let status = 0
+        checked != true ? status = 0 : status = 1
+
+        fetch("/api/product/status/update?idp="+idp+"&status="+status)
+        .then(response => response.json())
+        .then(result => {
+
+            if (result.err != null) {
+                
+                if (result.err.code = "DATA_MISSED") alert("Données manquantes.")
+                else {
+
+                    console.log(result.err)
+                    alert("Echec de l'opération.")
+                    
+                }
+
+            } else console.log("success")
+
+        })
+        .catch((error)=>{
+
+            console.log(error)
+            alert("Echec de l'opération.")
+
+        })
+         
+    }
+
+}
+
+
+
+
+
+
+/* if (myTable_product) {
+
+
+
     const mySwitch_list = myTable_product.querySelectorAll(".mySwitch-block")
     if (mySwitch_list.length > 0) {
         
@@ -197,15 +239,25 @@ if (myTable_product) {
 
                         if (result.err != null) {
                             
-                            if (result.err.code = "DATA_MISSED") console.log("data missed")
-                            else console.log(result.err)
+                            if (result.err.code = "DATA_MISSED") alert("Données manquantes.")
+                            else {
+              
+                                console.log(result.err)
+                                alert("Echec de l'opération.")
+                                
+                            }
 
                         } else {
-
-                            console.log("success")
+                            
                             status == 0 ? product_status.innerHTML = "Non visible" : product_status.innerHTML = "Visible"
 
                         }
+
+                    })
+                    .catch((error)=>{
+
+                        console.log(error)
+                        alert("Echec de l'opération.")
 
                     })
 
@@ -218,3 +270,4 @@ if (myTable_product) {
     }
 
 }
+ */

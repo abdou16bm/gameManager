@@ -88,6 +88,7 @@
 
                             <% if (typeof (category[i].products) != "undefined" &&  category[i].products.length > 0 ) {
                             for(let j = 0; j<category[i].products.length; j++) {
+                            if (category[i].products[j].product_status != 0) {  
                             %>
 
                                 <div class="col-12 col-md-3">
@@ -110,7 +111,7 @@
                                     </div>
                                 </div>
 
-                            <% }
+                            <% }}
                             }%>
 
                         </div>
