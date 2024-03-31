@@ -7959,3 +7959,12 @@ Buy Now Btn
   border-top: none;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.flex-between {
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+}

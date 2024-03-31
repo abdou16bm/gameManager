@@ -59,13 +59,24 @@
 <script src="/assets/js/form-validator.min.js"></script>
 <!-- Contact JS -->
 <script src="/assets/js/contact-form-script.js"></script>
+<!-- datatable -->
+<script src="/assets/libs/datatable/datatable.min.js"></script>
+<script src="/assets/libs/datatable/datatable.buttons.min.js"></script>
+<script src="/assets/libs/datatable/jszip.min.js"></script>
+<script src="/assets/libs/datatable/datatable.buttons.html5.min.js"></script>
 <!-- Wow JS -->
 <script src="/assets/js/wow.min.js"></script>
 <!-- Custom JS -->
 <script src="/assets/js/main.js"></script>
 
-
 <!-- <script src="/assets/js/dashboard.js"></script> -->
+<script>
+$('#myDatatable').DataTable({
+  dom : "<'mb-3 flex-between'lB>frt<'mt-3 flex-between'ip>",
+  order : [],
+  buttons: [{extend: 'excel', className: 'btn btn-primary', text : "Exporter en excel"}]
+});
+</script>
 </body>
 
 </html>

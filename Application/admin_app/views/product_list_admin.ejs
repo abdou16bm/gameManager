@@ -16,7 +16,7 @@
             <div class="col-lg-12 col-md-12 pb-5 ">
                 <div class="order-details">
                     <div class="order-table table-responsive ">
-                        <table class="table table-bordered">
+                        <table id="myDatatable" class="table table-bordered">
                             <thead>
                             <tr>
                                 <!-- <th scope="col">#</th> -->
@@ -29,30 +29,30 @@
                                 <th scope="2" class="col-1"></th>
                             </tr>
                             </thead>
-                            <% if (typeof (product) != "undefined" &&  product.length > 0 ) {
-                            for(let i = 0; i<product.length; i++) {
-                            %>
-                                <tbody>
-                                <tr>
-                                    <!--  <td>01</td> -->
-                                    <td><%= product[i].cat_name%></td>
-                                    <td>
-                                        <img src="/api/client/1/img/product/<%= product[i].product_id%>/main.jpg" alt="item" width="80px" >
-                                    </td>
-                                    <td> <%= product[i].product_name%></td>
-                          <!--           <td style="font-size: 10px;"> <%= product[i].product_desig%></td>
-                                    <td style="font-size: 10px;"> <%= product[i].product_option%></td> -->
-                                    <td><%= product[i].product_price%> da</td>
-                                    <td class="text-center">
-                                        <button class="btn btn-lg p-0 " type="button" data-bs-toggle="modal" data-bs-target="#product-edit" onclick="set_info('<%=JSON.stringify(product[i]).replace(/'/g, '`').replace(/\\n/g,' ')%>',1)"><i class="bx bxs-edit"></i></button>
-                                        <!-- <button class="btn btn-lg p-0 offset-1 " type="button" class="bx bxs-detail"></i></button> -->
-                                        <button class="btn btn-lg p-0 offset-1 " type="button" data-bs-toggle="modal" data-bs-target="#confirmActionModal"  onclick="confirmmodal('<%= product[i].product_id %>',1)"><i class="bx bxs-trash"></i></button>
-                                    </td>
-                                </tr>
-                                </tbody>
-
-                            <% }
-                            }%>
+                            <tbody>
+                                <% if (typeof (product) != "undefined" &&  product.length > 0 ) {
+                                for(let i = 0; i<product.length; i++) {
+                                %>                    
+                                    <tr>
+                                        <!--  <td>01</td> -->
+                                        <td><%= product[i].cat_name%></td>
+                                        <td>
+                                            <img src="/api/client/1/img/product/<%= product[i].product_id%>/main.jpg" alt="item" width="80px" >
+                                        </td>
+                                        <td> <%= product[i].product_name%></td>
+                                        <!--<td style="font-size: 10px;"> <%= product[i].product_desig%></td>
+                                        <td style="font-size: 10px;"> <%= product[i].product_option%></td> -->
+                                        <td><%= product[i].product_price%> da</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-lg p-0 " type="button" data-bs-toggle="modal" data-bs-target="#product-edit" onclick="set_info('<%=JSON.stringify(product[i]).replace(/'/g, '`').replace(/\\n/g,' ')%>',1)"><i class="bx bxs-edit"></i></button>
+                                            <!-- <button class="btn btn-lg p-0 offset-1 " type="button" class="bx bxs-detail"></i></button> -->
+                                            <button class="btn btn-lg p-0 offset-1 " type="button" data-bs-toggle="modal" data-bs-target="#confirmActionModal"  onclick="confirmmodal('<%= product[i].product_id %>',1)"><i class="bx bxs-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                
+                                <% }
+                                }%>
+                        </tbody>
                         </table>
                     </div>
                 </div>
