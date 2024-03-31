@@ -343,6 +343,7 @@ const order_client_get_products = function (order_id,callback) {
      "from order_client\n" +
      "         inner join product_detail on product_detail.order_id = order_client.order_id\n" +
      "         inner join product on product_detail.product_id = product.product_id\n" +
+     "         inner join category on product.cat_id = category.cat_id\n" +
      "         left join product_option  on product_detail.detail_id = product_option.detail_id\n" +
      "         left join option_add on product_option.option_id = option_add.option_id\n" +
      "where order_client.order_id = ?\n" +

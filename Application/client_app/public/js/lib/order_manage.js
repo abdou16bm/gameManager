@@ -68,8 +68,8 @@ const order_products_load = function (order){
                 let tdElement5 = document.createElement('td');
                 let tdElement6 = document.createElement('td');
                 let removeBtn = document.createElement('button');
-
-                tdElement1.innerHTML = "<p><strong>"+order[i].product_name+"</strong></p>";
+                console.log(order)
+                tdElement1.innerHTML = "<div class ='d-flex justify-content-center align-items-start flex-column gap-2'><strong class='text-dark'>"+order[i].product_name+"</strong><p class='test-muted'>"+order[i].cat_name+"</p></div>";
 
                 if(order[i].sauces.length > 0) tdElement1.innerHTML += "<p>Sauces : "+order[i].sauces.replaceAll(',',' / ')+"</p>";
                 if(order[i].supplements.length > 0) tdElement1.innerHTML += "<p>Supplements : "+order[i].supplements.replaceAll(',',' / ')+"</p>";

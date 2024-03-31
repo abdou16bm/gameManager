@@ -54,6 +54,8 @@ async function printTicket(number, products, totalPrice, date, time, pic, callba
     printer.println(date + " - " + time);
     printer.newLine();
 
+    /* products[i].cat_name for category */
+    
     for (let i = 0; i < products.length; i++) {
         totalPrice1 += products[i].detail_price;
         printer.leftRight(products[i].product_name, products[i].detail_price + " DA");
