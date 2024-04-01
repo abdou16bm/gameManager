@@ -66,7 +66,7 @@
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
                 %>
-                    <li id="cat<%= category[i].cat_id%>" class="catBlock" >
+                    <li id="cat<%= category[i].cat_id%>" class="catBlock m-3" >
                         <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
                             <div style="background-image: url('/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg'); height: 80%;  background-size: contain; background-repeat: no-repeat;"></div> 
                             <h4 class="mb-2" style="white-space:nowrap; "><%= category[i].cat_name%></h4>
