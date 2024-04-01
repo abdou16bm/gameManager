@@ -3,7 +3,8 @@ const database_module=require('./database');
 const category_get_all = function(callback){
  let sql="SELECT category.cat_id,cat_name,cat_pic_count,group_concat(product_name)'products' from category\n" +
      "left join product p on category.cat_id = p.cat_id\n" +
-     "group by category.cat_id";
+     "group by category.cat_id\n" +
+     "order by category.cat_priority";
 database_module.db.query(sql,[], function (error, results, fields) {
 if (error) console.log('error : ',error);
 //console.log('results: ', results);

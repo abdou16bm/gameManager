@@ -39,6 +39,7 @@
 
 <!-- Jquery Slim JS -->
 <script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery_ui.js"></script>
 <!-- Bootstrap JS -->
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
 <!-- Meanmenu JS -->
@@ -76,6 +77,7 @@ $('#myDatatable').DataTable({
   order : [],
   buttons: [{extend: 'excel', className: 'btn btn-primary', text : "Exporter en excel"}]
 });
+$( "#mySortable tbody" ).sortable();
 </script>
 </body>
 

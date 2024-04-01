@@ -4,6 +4,7 @@ const doc_module = require('../lib/doc');
 const { foreignDatas_GetAll } = require('../lib/default_lib');
 const { db } = require('../lib/database');
 const category_module = require('../lib/category');
+const callback_Function_module = require("../../admin_app/lib/callback_Function");
 
 
 const category_list_page = function (req,res) {
@@ -284,3 +285,35 @@ const category_filter = function (req,res) {
 exports.category_filter = category_filter
 
 
+
+
+const category_priority_update = function (req,res) {
+
+    const input = req.body
+    let myError = null
+    console.log(input)
+
+    if (input["categories"].length > 0) {
+
+        input["categories"].forEach(category => {
+           
+            const cat_id = category["idc"]
+            const data_category = {cat_priority : category["priority"]}
+            category_module.category_update(cat_id,data_category,(err,result)=> {if(err) myError = err})
+            
+        });
+  
+    }
+
+    callback_Function_module.callbackFunction(function (err,result) {
+   
+        if (req.baseUrl == "/api") res.send({err : myError})
+        else res.redirect("/category/admin/list")
+
+    })
+
+};
+
+
+
+exports.category_priority_update = category_priority_update

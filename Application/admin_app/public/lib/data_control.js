@@ -1,6 +1,7 @@
 let confirmDelMessage = "Etes-vous sure de vouloir supprimer ?";
 let confirmValidationMessage = "Etes-vous sure de vouloir confirmer ?";
-const myTable_product = document.querySelector(".myTable-product")
+const myTable_product = document.querySelector(".myTable-product");
+const cat_pripority_Modal = document.querySelector("#cat-priority")
 
 
 const confirmmodal = function(id,type,info){
@@ -210,64 +211,56 @@ if (myTable_product) {
 
 
 
-
-
-
-/* if (myTable_product) {
-
-
-
-    const mySwitch_list = myTable_product.querySelectorAll(".mySwitch-block")
-    if (mySwitch_list.length > 0) {
-        
-        mySwitch_list.forEach(mySwitch => {
-            
-            const idp = mySwitch.getAttribute("idp");
-            const input = mySwitch.querySelector("input");
-            const product_status = mySwitch.querySelector(".product-status");
-
-            if (idp && input && product_status) {
-
-                input.addEventListener("input",()=>{
-
-                    let status = 0
-                    input.checked != true ? status = 0 : status = 1
-
-                    fetch("/api/product/status/update?idp="+idp+"&status="+status)
-                    .then(response => response.json())
-                    .then(result => {
-
-                        if (result.err != null) {
-                            
-                            if (result.err.code = "DATA_MISSED") alert("Données manquantes.")
-                            else {
-              
-                                console.log(result.err)
-                                alert("Echec de l'opération.")
-                                
-                            }
-
-                        } else {
-                            
-                            status == 0 ? product_status.innerHTML = "Non visible" : product_status.innerHTML = "Visible"
-
-                        }
-
-                    })
-                    .catch((error)=>{
-
-                        console.log(error)
-                        alert("Echec de l'opération.")
-
-                    })
-
-                })
+if (cat_pripority_Modal) {
     
-            }
-
-        });
+    function priorityCat_valid() {
+    
+        const table = cat_pripority_Modal.querySelector(".cat-priority-table")
+        if (table) {
+            
+            let tboodyElement = table.querySelector("tbody");
+            let trElement = tboodyElement.querySelectorAll("tr")
         
+            let data_priority = {categories : []}
+        
+            if (trElement.length > 0) {
+                
+                for (let i = 0; i < trElement.length; i++) {
+                   
+                    let idc = trElement[i].getAttribute("idc")
+                    let priority = i+1       
+        
+                    data_priority.categories.push({idc : idc, priority : priority})
+                    
+                }
+        
+            }
+            
+            let url = "/api/category/priority/update"
+            fetch(url,{
+
+                headers: {'Accept': 'application/json','Content-Type': 'application/json'},
+                method : "POST",
+                body : JSON.stringify(data_priority)})
+
+            .then(response => response.json())
+            .then(result => {
+
+                if (result.err != null) {
+                    
+                    console.log(result.err)
+                    alert("Echec de l'opération.")   
+
+                } else location.reload()
+                    
+            })
+    
+        }
+    
     }
 
+    const btnValid = cat_pripority_Modal.querySelector(".btnValid")
+    if (btnValid) btnValid.onclick = ()=> priorityCat_valid()
+    
 }
- */
+

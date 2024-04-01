@@ -22,7 +22,7 @@ const category_controller = require('../controller/category');
  category_router.post('/category/add',authentication_controller.isAuthenticated,category_controller.category_add_save);
  category_router.get('/category/:id/delete',authentication_controller.isAuthenticated,category_controller.category_delete);
  category_router.get('/category/list/:filter',authentication_controller.isAuthenticated,category_controller.category_filter);
-
+ category_router.post('/category/priority/update',authentication_controller.isAuthenticated,category_controller.category_priority_update);
 
 
  module.exports = category_router;
