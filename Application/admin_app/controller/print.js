@@ -8,7 +8,7 @@ const order_client_module = require('../lib/order_client');
 const thermal_print_module = require('../lib/thermal_print');
 const {order_client_get_all} = require("../lib/order_client");
 
-const axios = require("axios");
+// const axios = require("axios");
 
 const print_ticket = function (req,res) {
 

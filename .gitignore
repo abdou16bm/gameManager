@@ -109,5 +109,5 @@ Aides/
 programme files/
 DeskApp/dist
 package-lock.json
-.psd
-.exe
+*.psd
+*.exe
