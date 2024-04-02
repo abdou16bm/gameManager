@@ -149,6 +149,7 @@ let user_get_all_limit = function (limit1,limit2,order_value,order_type,callback
 
 let sql =" SELECT * FROM user \n" +
 // "order by ? ?\n"+
+"where priv_id NOT IN (1,2)\n" +
 " order by user_id DESC \n"+
 "LIMIT ?,?";
 
