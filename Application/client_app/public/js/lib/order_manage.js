@@ -3,6 +3,7 @@ const order_table = document.querySelector("#order_table tbody");
 const order_total_price = document.querySelector("#order_total_price");
 const btn_confirm_product = document.querySelector('#btn_confirm_product');
 const btn_cancel_product = document.querySelectorAll('.btn_cancel_product');
+const btn_order_next = document.querySelector("#btn_order_next");
 const optionsAddModalSimple = document.querySelector('#optionsAddModal');
 const optionsAddModal = new bootstrap.Modal(document.querySelector('#optionsAddModal'), {
     keyboard: false
@@ -55,8 +56,18 @@ const order_products_load = function (order){
             const order_info = data.order_info[0];
             order_table.innerHTML = "";
 
-            if(order.length > 0) btn_order_confirm.style.visibility = "visible"
-            else btn_order_confirm.style.visibility = "hidden"
+            if(order.length > 0) {
+                
+                btn_order_confirm.style.visibility = "visible";
+                btn_order_next.style.visibility = "visible"
+
+            }
+            else {
+
+                btn_order_confirm.style.visibility = "hidden";
+                btn_order_next.style.visibility = "hidden"
+
+            }
 
             for(let i=0; i<order.length;i++)
             {
