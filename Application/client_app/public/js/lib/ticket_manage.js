@@ -34,7 +34,8 @@ btn_order_confirm.addEventListener('click',function(e){
             else alert ("erreur veuillez appeler l'administrateur")
 
             setTimeout(function (){
-                location.href = "/";
+               /*  location.href = "/"; */
+               location.href = "/order/new";
             },6000)
         })
 })

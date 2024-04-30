@@ -50,8 +50,8 @@
                 <a class="btn btn-success mr-5 " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
                     Voir Ma Commande
                 </a>
-                <a class="btn btn-danger btn_cancel_product"  style="margin-left: 15px;" role="button">Annuler ma commande</a>
-                <a class="btn btn-primary" id="btnHideContent" style="margin-left: 15px;" role="button">Retour</a>
+  <!--               <a class="btn btn-danger btn_cancel_product"  style="margin-left: 15px;" role="button">Annuler ma commande</a> -->
+                <a class="btn btn-primary d-none" id="btnHideContent" style="margin-left: 15px;" role="button">Retour</a>
             </span>
   
           </div>
@@ -93,7 +93,7 @@
 
                                 <div class="col-12 col-md-3">
                                     <div class="pizza-shop-item">
-                                        <div class="image">
+                                        <div class="image" style="cursor: pointer;" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
                                             <img src="/api/client/1/img/product/<%= category[i].products[j].product_id %>/main.jpg"
                                                  alt="image" style="height: 350px;">
 
@@ -183,7 +183,8 @@
                         <div class="cart-buttons">
                             <div class="row justify-content-between">
                                 <div class="col-lg-6 col-sm-6 col-md-6 text-center">
-                                    <button class="btn btn-danger col-lg-10 btn-lg btn_cancel_product">Annuler</button>
+                                    <button type="button" class="btn btn-primary col-lg-10 btn-lg" 
+                                    data-bs-dismiss="offcanvas" aria-label="Close">Suivant</button>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-md-6 text-center">
                                     <button id="btn_order_confirm" order_id="<%= order_id %>" class="btn btn-success col-lg-10 btn-lg " data-bs-toggle="modal" data-bs-target="#confirmOrderModal">Confirmer</button>

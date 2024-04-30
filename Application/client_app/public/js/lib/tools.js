@@ -10,12 +10,19 @@ if (catBlock != null && typeof catBlock != 'undefined' && btnHideContent != null
     {
         catBlock[i].addEventListener('click', function (){
             tab_content.classList.remove('option_hide')
+            btnHideContent.classList.remove("d-none")
         })
     }
 
     btnHideContent.addEventListener('click',function (){
         
-        tab_content.classList.contains("option_hide") != true ? tab_content.classList.add('option_hide') : location.replace("/")
+      /* tab_content.classList.contains("option_hide") != true ? tab_content.classList.add('option_hide') : location.replace("/") */
+      if (tab_content.classList.contains("option_hide") != true) {
+
+        tab_content.classList.add('option_hide');
+        btnHideContent.classList.add("d-none")
+
+      }
 
     })
 }

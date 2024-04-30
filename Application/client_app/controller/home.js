@@ -6,7 +6,9 @@ const { db } = require('../../admin_app/lib/database');
 
 
 const home = function (req,res) {
-    res.render("order_init");
+/*     res.render("order_init"); */
+res.redirect("/order/new")
+
 };
 
 exports.home = home
