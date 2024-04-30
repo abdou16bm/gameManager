@@ -23,7 +23,7 @@ const category_controller = require('../controller/category');
  category_api.get('/category/:id/delete',authentication_controller.isAuthenticated,category_controller.category_delete);
  category_api.get('/category/list/:filter',authentication_controller.isAuthenticated,category_controller.category_filter);
  category_api.post('/category/priority/update',authentication_controller.isAuthenticated,category_controller.category_priority_update);
-
+ category_api.get('/category/status/update',authentication_controller.isAuthenticated,category_controller.category_status_update);
 
  module.exports = category_api;
 

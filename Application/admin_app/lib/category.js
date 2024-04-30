@@ -1,7 +1,7 @@
 const database_module=require('./database');
 
 const category_get_all = function(callback){
- let sql="SELECT category.cat_id,cat_name,cat_pic_count,group_concat(product_name)'products' from category\n" +
+ let sql="SELECT category.cat_id,cat_name,cat_pic_count,cat_status,group_concat(product_name)'products' from category\n" +
      "left join product p on category.cat_id = p.cat_id\n" +
      "group by category.cat_id\n" +
      "order by category.cat_priority";
@@ -15,6 +15,23 @@ return results;
 
 
 exports.category_get_all = category_get_all;
+
+const category_get_all_client = function(callback){
+    let sql="SELECT category.cat_id,cat_name,cat_pic_count,cat_status,group_concat(product_name)'products' from category\n" +
+        "left join product p on category.cat_id = p.cat_id\n" +
+        "where cat_status = 1\n" +
+        "group by category.cat_id\n" +
+        "order by category.cat_priority";
+   database_module.db.query(sql,[], function (error, results, fields) {
+   if (error) console.log('error : ',error);
+   //console.log('results: ', results);
+   if (callback){callback(error,results)};
+   return results;
+   });
+   };
+   
+   
+   exports.category_get_all_client = category_get_all_client;
 
 
 const category_get_one = function(cat_id,callback){

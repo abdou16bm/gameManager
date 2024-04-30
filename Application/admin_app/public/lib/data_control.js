@@ -1,7 +1,9 @@
 let confirmDelMessage = "Etes-vous sure de vouloir supprimer ?";
 let confirmValidationMessage = "Etes-vous sure de vouloir confirmer ?";
 const myTable_product = document.querySelector(".myTable-product");
-const cat_pripority_Modal = document.querySelector("#cat-priority")
+const myTable_category = document.querySelector(".myTable-category");
+const cat_pripority_Modal = document.querySelector("#cat-priority");
+
 
 
 const confirmmodal = function(id,type,info){
@@ -176,7 +178,7 @@ const set_info = function (info,type){
 
 if (myTable_product) {
 
-    function status_update(checked,idp) {
+    function productStatus_update(checked,idp) {
         
         let status = 0
         checked != true ? status = 0 : status = 1
@@ -209,6 +211,41 @@ if (myTable_product) {
 
 }
 
+
+if (myTable_category) {
+
+    function categoryStatus_update(checked,idc) {
+        
+        let status = 0
+        checked != true ? status = 0 : status = 1
+
+        fetch("/api/category/status/update?idc="+idc+"&status="+status)
+        .then(response => response.json())
+        .then(result => {
+
+            if (result.err != null) {
+                
+                if (result.err.code = "DATA_MISSED") alert("Données manquantes.")
+                else {
+
+                    console.log(result.err)
+                    alert("Echec de l'opération.")
+                    
+                }
+
+            } else console.log("success")
+
+        })
+        .catch((error)=>{
+
+            console.log(error)
+            alert("Echec de l'opération.")
+
+        })
+         
+    }
+
+}
 
 
 if (cat_pripority_Modal) {

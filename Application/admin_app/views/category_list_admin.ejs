@@ -26,12 +26,13 @@
                 <div class="order-details">
                     <h3 class="title">liste des Catégories</h3>
                     <div class="order-table table-responsive">
-                        <table id="myDatatable" class="table table-bordered">
+                        <table id="myDatatable" class="table table-bordered myTable-category">
                             <thead>
                                 <tr>
                                     <th scope="col" class="col-1">#</th>
                                     <th scope="col">Image</th>
                                     <th scope="col">Catégorie</th>
+                                    <th scope="col">Visibilité</th>
                                     <th scope="2"></th>
                                 </tr>
                             </thead>
@@ -48,6 +49,12 @@
                                             </td>
                                             <td class="product-total">
                                                 <span><%= category[i].cat_name%></span>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="mySwitch me-1">
+                                                    <input type="checkbox" oninput="categoryStatus_update(this.checked,'<%= category[i].cat_id %>')" <%= category[i].cat_status == 1 ? "checked" : "" %>>
+                                                    <span class="mySlider myRound"></span>
+                                                </label>
                                             </td>
                                             <td class="text-center">
 

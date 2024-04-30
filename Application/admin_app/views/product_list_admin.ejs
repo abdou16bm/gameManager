@@ -46,7 +46,7 @@
                                         <td><%= product[i].product_price%> da</td>
                                         <td class="text-center">
                                             <label class="mySwitch me-1">
-                                                <input type="checkbox" oninput="status_update(this.checked,'<%= product[i].product_id %>')" <%= product[i].product_status == 1 ? "checked" : "" %>>
+                                                <input type="checkbox" oninput="productStatus_update(this.checked,'<%= product[i].product_id %>')" <%= product[i].product_status == 1 ? "checked" : "" %>>
                                                 <span class="mySlider myRound"></span>
                                             </label>
                                         </td>

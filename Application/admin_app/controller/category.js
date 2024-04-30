@@ -317,3 +317,31 @@ const category_priority_update = function (req,res) {
 
 
 exports.category_priority_update = category_priority_update
+
+
+const category_status_update = function (req,res) {
+
+    const idc = req.query.idc;
+    const status = req.query.status
+
+    console.log("status : ",status)
+
+    if (
+
+        typeof(idc) != "undefined" && idc != null && idc != "" 
+        && typeof(status) != "undefined" && status != null && status != ""
+    
+    ) { 
+        
+        category_module.category_update(idc,{cat_status : status},function (err,result1) {
+
+            res.send({result_update : result1, err : err});
+
+        });
+      
+
+    } else res.send({err : {code : "DATA_MISSED"}})
+
+};
+
+exports.category_status_update = category_status_update

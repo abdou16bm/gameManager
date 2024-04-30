@@ -84,7 +84,7 @@ const order_client_home = function (req,res) {
 
     let order_id = req.params.id;
 
-    category_module.category_get_all(function (err,result1){
+    category_module.category_get_all_client(function (err,result1){
         if (err) console.log('error',err);
 
         for (let i = 0; i < result1.length; i++){
