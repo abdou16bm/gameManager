@@ -221,6 +221,7 @@ const category_add_save = function (req,res) {
         if (typeof input.user_id != 'undefined')  input.user_id = req.session.userid;
 
         let data_insert =input;
+        data_insert["cat_status"] = 1;
         category_module.category_add(data_insert,function (err,result1) {
             if (err) console.log('error',err);
             doc_module.uploadFile('./../docDyn/public/img/category/',result1.insertId,files,'main','main','jpg', function (err,count1){
