@@ -243,6 +243,7 @@ const product_add_save = function (req,res) {
         if (typeof input.user_id != 'undefined')  input.user_id = req.session.userid;
 
         let data_insert =input;
+        data_insert["product_status"] = 1;
         const { option_add_product } = input;
         delete data_insert.option_add_product;
 

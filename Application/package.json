@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "Print App",
   "version": "1.0.0",
   "bin": "print_app/app.js",
+=======
+  "name": "Client App",
+  "version": "1.0.0",
+  "bin": "client_app/app.js",
+>>>>>>> 4837997fad60918852848797d84d355d1fb6e9fc
   "bin_client": "client_app/app.js",
   "bin_admin": "admin_app/app.js",
   "bin_print": "print_app/app.js",
@@ -41,6 +47,6 @@
     "mysql": "2.18.1",
     "node-thermal-printer": "4.2.0",
     "nodemailer": "6.9.1",
-    "pkg": "5.8.1"
+    "pkg": "^5.8.1"
   }
 }
