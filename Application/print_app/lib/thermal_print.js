@@ -45,35 +45,36 @@ async function printTicket(number, products, totalPrice, date, time, pic, callba
 
     let totalPrice1 = 0;
     printer.alignCenter();
+    printer.setTextNormal();
+    await printer.printImage(pic);
     printer.newLine();
+    printer.alignCenter();
+ /*    printer.newLine();
     printer.setTextNormal();
     printer.setTextSize(3, 3);
-    printer.println(number);
+    printer.println(number); */
     printer.newLine();
     printer.setTextNormal();
     printer.println(date + " - " + time);
     printer.newLine();
 
     /* products[i].cat_name for category */
-
     for (let i = 0; i < products.length; i++) {
         totalPrice1 += products[i].detail_price;
-        printer.leftRight(products[i].product_name,products[i].detail_price + " DA");
+        printer.bold(true);   
+        printer.leftRight(products[i].product_name, products[i].detail_price + " DA");
+        printer.setTextNormal();   
         if (products[i].cat_name.length > 0) printer.leftRight(products[i].cat_name, "")
         // if (products[i].sauces.length > 0) printer.leftRight(products[i].sauces, "")
         // if (products[i].others.length > 0) printer.leftRight(products[i].others, "")
         printer.newLine();
     }
-
+ 
     printer.leftRight("Total :", totalPrice1 + " DA");
-    printer.alignCenter();
-    printer.setTextNormal();
-    await printer.printImage(pic);
-    printer.newLine();
     printer.setTextNormal();
     printer.println("Merci de votre visite et a bientot");
     printer.newLine();
-    printer.setTextNormal();
+    printer.setTextNormal();   
     printer.println("Dreamgames - 05 55 55 83 20 - 06 58 07 00 08");
 
     printer.cut();

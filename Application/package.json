@@ -1,7 +1,7 @@
 {
-  "name": "Admin App",
+  "name": "Print App",
   "version": "1.0.0",
-  "bin": "admin_app/app.js",
+  "bin": "print_app/app.js",
   "bin_client": "client_app/app.js",
   "bin_admin": "admin_app/app.js",
   "bin_print": "print_app/app.js",
