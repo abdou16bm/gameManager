@@ -88,7 +88,7 @@ exports.product_delete = product_delete;
 
 
 const product_get_filter = function (filter_field,filter_data,callback) {
- let sql = "SELECT * from product where "+filter_field+ " like '"+filter_data+"'";
+ let sql = "SELECT * from product where "+filter_field+ " like '"+filter_data+"' order by LTRIM(product_name)";
  database_module.db.query(sql,[], function (error, results, fields) {
   if (error) console.log('error : ',error);
 //console.log('results: ', results);
