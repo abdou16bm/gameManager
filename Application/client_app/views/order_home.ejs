@@ -42,7 +42,7 @@
     <link rel="icon" type="image/ico" href="/assets/img/icon.ico">
 </head>
 <script></script>
-<body>
+<body style="background-image: url(/assets/img/bg-home.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -63,15 +63,15 @@
         </div>
       </nav>
 <!-- Start Menu Area -->
-<section class="mt-5 pt-5">
+<section class="mt-5 pt-5" >
     <div class="row">
         
         <div class="tab menu-list-tab">
-            <ul class="tabs justify-content-center">
+            <ul class="tabs justify-content-center" >
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
                 %>
-                    <li id="cat<%= category[i].cat_id%>" class="catBlock m-3" >
+                    <li id="cat<%= category[i].cat_id%>" class="catBlock m-3" style="background-color: #fff;">
                         <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
                             <div style="background-image: url('/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg'); height: 80%;  background-size: contain; background-repeat: no-repeat;"></div> 
                             <h4 class="mb-2" style="white-space:nowrap; "><%= category[i].cat_name%></h4>
