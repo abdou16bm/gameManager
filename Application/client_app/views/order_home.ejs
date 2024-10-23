@@ -50,12 +50,19 @@
                 <div ondblclick="window.close()">
                     <img src="/assets/img/logo.png" width="50" alt="">
                 </div>
+                <div class="justify-content-center align-items-center" id="searchBlock" style="display: none;">
+                    <i class="bx bxs-right-arrow-alt bx-tada text-white me-3" style="font-size: 60px;"></i>
+                    <h6 class="text-white m-0 d-inline me-3">RECHERCHE ICI : </h6>
+                    <div style="width: 400px;">
+                        <input class="form-control" type="search" id="myInputSearch">
+                    </div>
+                </div>
                 <div>
                     <a class="btn btn-success mr-5 " data-bs-toggle="offcanvas" href="#order_detail_left" role="button" aria-controls="order_detail_left">
                         Voir Ma Commande
                     </a>
         <!--               <a class="btn btn-danger btn_cancel_product"  style="margin-left: 15px;" role="button">Annuler ma commande</a> -->
-                    <a class="btn btn-primary d-none" id="btnHideContent" style="margin-left: 15px;" role="button">Retour</a>
+                    <a class="btn btn-primary" id="btnHideContent" style="margin-left: 15px; display: none;" role="button">Retour</a>
                 </div>
             </span>
   
@@ -71,7 +78,11 @@
                 <% if (typeof (category) != "undefined" &&  category.length > 0 ) {
                 for(let i = 0; i<category.length; i++) {
                 %>
+<<<<<<< HEAD
                     <li id="cat<%= category[i].cat_id%>" class="catBlock m-3" style="background-color: #fff;">
+=======
+                    <li id="cat<%= category[i].cat_id%>" class="catBlock m-3" catId="<%= category[i].cat_id%>">
+>>>>>>> 55e272ab055d0fcc0426daa9d8a4f72be2bfe988
                         <a href="#" class="mb-2" style=" background-image: url('/assets/img/bg-menu.png') ;">
                             <div style="background-image: url('/api/client/1/img/category/<%= category[i].cat_id%>/main.jpg'); height: 80%;  background-size: contain; background-repeat: no-repeat;"></div> 
                             <h4 class="mb-2" style="white-space:nowrap; "><%= category[i].cat_name%></h4>
@@ -88,7 +99,7 @@
                 for(let i = 0; i<category.length; i++) {
                 %>
 
-                    <div class="tabs_item pt-10">
+                    <div class="tabs_item pt-10" id="productsTab-<%= category[i].cat_id%>">
                         <div class="row">
 
                             <% if (typeof (category[i].products) != "undefined" &&  category[i].products.length > 0 ) {
@@ -96,7 +107,7 @@
                             if (category[i].products[j].product_status != 0) {  
                             %>
 
-                                <div class="col-12 col-md-3">
+                                <div class="col-12 col-md-3" id="productBlock" productData-search="<%= category[i].products[j].product_name %>">
                                     <div class="pizza-shop-item">
                                         <div class="image" style="cursor: pointer;" onclick="order_product_select('<%=order_id%>','<%= category[i].products[j].product_id %>')">
                                             <img src="/api/client/1/img/product/<%= category[i].products[j].product_id %>/main.jpg"

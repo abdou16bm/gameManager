@@ -1,7 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "Client App",
   "version": "1.0.0",
   "bin": "client_app/app.js",
+=======
+  "name": "Print App",
+  "version": "1.0.0",
+  "bin": "print_app/app.js",
+>>>>>>> 55e272ab055d0fcc0426daa9d8a4f72be2bfe988
   "bin_client": "client_app/app.js",
   "bin_admin": "admin_app/app.js",
   "bin_print": "print_app/app.js",
